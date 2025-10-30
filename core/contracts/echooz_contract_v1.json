@@ -1,0 +1,69 @@
+{
+  "period": {
+    "year": 2024,
+    "start_date": "2024-01-01",
+    "end_date": "2024-12-31"
+  },
+  "statements": {
+    "balance_sheet": {
+      "assets": {
+        "non_current": { "sum": 0.0 },
+        "current": { "sum": 0.0 },
+        "total_assets": 0.0
+      },
+      "liabilities_equity": {
+        "equity": 0.0,
+        "provisions": 0.0,
+        "liabilities_short_term": 0.0,
+        "liabilities_long_term": 0.0,
+        "total_liabilities_equity": 0.0
+      },
+      "check": { "difference": 0.0, "tolerance": 0.01, "balanced": true }
+    },
+    "profit_and_loss": {
+      "revenue": 0.0,
+      "material_expenses": 0.0,
+      "personnel_expenses": 0.0,
+      "other_operating_expenses": 0.0,
+      "other_operating_income": 0.0,
+      "depreciation": 0.0,
+      "interest_expenses": 0.0,
+      "result": 0.0
+    }
+  },
+  "meta": {
+    "coa": "SKR03",
+    "source": "echooz_parser",
+    "file_sha256": "",
+    "columns_used": [],
+    "mapped_accounts": 0,
+    "unmapped_accounts": 0,
+    "unmapped_accounts_list": [],
+    "coverage": 0.0,
+    "coverage_weighted": 0.0,
+    "notes": [],
+    "created_at": "",
+    "rows_processed": 0,
+    "forced_balance": false,
+    "pipeline": {
+      "fingerprint": "",
+      "inputs": {
+        "app_version": "",
+        "file_sha256": "",
+        "headers": {
+          "X-Chart-Of-Accounts": "",
+          "X-Period-Start": "",
+          "X-Period-End": "",
+          "X-Aggregate": ""
+        },
+        "components": {
+          "coa_pack_sha256": "",
+          "patterns_sha256": null,
+          "overlays_sha256": null,
+          "mapper_version": "",
+          "aggregator_version": ""
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://echooz.local/core/data/analysis_contract.schema.json",
+  "title": "Echooz Analysis Result (Bilanz & GuV)",
+  "type": "object",
+  "required": ["period", "statements", "meta"],
+  "properties": {
+    "period": {
+      "type": "object",
+      "required": ["year", "start_date", "end_date"],
+      "properties": {
+        "year": { "type": "integer", "minimum": 1900, "maximum": 2999 },
+        "start_date": { "type": "string", "format": "date" },
+        "end_date": { "type": "string", "format": "date" }
+      },
+      "additionalProperties": false
+    },
+    "statements": {
+      "type": "object",
+      "required": ["balance_sheet", "profit_and_loss"],
+      "properties": {
+        "balance_sheet": {
+          "type": "object",
+          "required": ["assets", "liabilities_equity", "check"],
+          "properties": {
+            "assets": {
+              "type": "object",
+              "required": ["non_current", "current", "total_assets"],
+              "properties": {
+                "non_current": {
+                  "type": "object",
+                  "description": "Beliebige Unterposten (z. B. Sachanlagen, immaterielle VG) als Zahlen.",
+                  "patternProperties": { ".*": { "type": "number" } },
+                  "additionalProperties": true
+                },
+                "current": {
+                  "type": "object",
+                  "description": "Beliebige Unterposten (z. B. Forderungen, liquide Mittel) als Zahlen.",
+                  "patternProperties": { ".*": { "type": "number" } },
+                  "additionalProperties": true
+                },
+                "total_assets": { "type": "number" }
+              },
+              "additionalProperties": false
+            },
+            "liabilities_equity": {
+              "type": "object",
+              "required": [
+                "equity",
+                "provisions",
+                "liabilities_short_term",
+                "liabilities_long_term",
+                "total_liabilities_equity"
+              ],
+              "properties": {
+                "equity": { "type": "number" },
+                "provisions": { "type": "number" },
+                "liabilities_short_term": { "type": "number" },
+                "liabilities_long_term": { "type": "number" },
+                "total_liabilities_equity": { "type": "number" }
+              },
+              "additionalProperties": false
+            },
+            "check": {
+              "type": "object",
+              "required": ["difference", "tolerance", "balanced"],
+              "properties": {
+                "difference": { "type": "number" },
+                "tolerance": { "type": "number", "default": 0.01 },
+                "balanced": { "type": "boolean" }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        "profit_and_loss": {
+          "type": "object",
+          "required": [
+            "revenue",
+            "material_expenses",
+            "personnel_expenses",
+            "other_operating_expenses",
+            "other_operating_income",
+            "depreciation",
+            "interest_expenses",
+            "result"
+          ],
+          "properties": {
+            "revenue": { "type": "number" },
+            "material_expenses": { "type": "number" },
+            "personnel_expenses": { "type": "number" },
+            "other_operating_expenses": { "type": "number" },
+            "other_operating_income": { "type": "number" },
+            "depreciation": { "type": "number" },
+            "interest_expenses": { "type": "number" },
+            "result": { "type": "number" },
+            "extraordinary_result": { "type": "number" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "meta": {
+      "type": "object",
+      "required": [
+        "coa",
+        "source",
+        "file_sha256",
+        "columns_used",
+        "mapped_accounts",
+        "unmapped_accounts",
+        "created_at",
+        "rows_processed"
+      ],
+      "properties": {
+        "coa": {
+          "type": "string",
+          "description": "Aktives Kontenprofil",
+          "enum": ["SKR03", "SKR04", "NETTI", "CUSTOM"]
+        },
+        "source": { "type": "string" },
+        "file_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "columns_used": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "mapped_accounts": { "type": "integer", "minimum": 0 },
+        "unmapped_accounts": { "type": "integer", "minimum": 0 },
+        "unmapped_accounts_list": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["account", "label", "saldo"],
+            "properties": {
+              "account": { "type": ["string", "number"] },
+              "label": { "type": "string" },
+              "saldo": { "type": "number" }
+            },
+            "additionalProperties": false
+          }
+        },
+        "coverage": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "coverage_weighted": { "type": "number", "minimum": 0.0, "maximum": 1.0 },
+        "notes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "created_at": { "type": "string", "format": "date-time" },
+        "rows_processed": { "type": "integer", "minimum": 0 },
+        "forced_balance": {
+          "type": "boolean",
+          "description": "Wurde Safe-Mode (Equity-Adjustment) angewendet?"
+        },
+        "pipeline": {
+          "type": "object",
+          "required": ["fingerprint", "inputs"],
+          "properties": {
+            "fingerprint": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+            "inputs": {
+              "type": "object",
+              "required": ["app_version", "file_sha256", "headers", "components"],
+              "properties": {
+                "app_version": { "type": "string" },
+                "file_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+                "headers": {
+                  "type": "object",
+                  "properties": {
+                    "X-Chart-Of-Accounts": { "type": ["string", "null"] },
+                    "X-Period-Start": { "type": ["string", "null"] },
+                    "X-Period-End": { "type": ["string", "null"] },
+                    "X-Aggregate": { "type": ["string", "null"] }
+                  },
+                  "additionalProperties": true
+                },
+                "components": {
+                  "type": "object",
+                  "required": [
+                    "coa_pack_sha256",
+                    "patterns_sha256",
+                    "overlays_sha256",
+                    "mapper_version",
+                    "aggregator_version"
+                  ],
+                  "properties": {
+                    "coa_pack_sha256": { "type": ["string", "null"] },
+                    "patterns_sha256": { "type": ["string", "null"] },
+                    "overlays_sha256": { "type": ["string", "null"] },
+                    "mapper_version": { "type": "string" },
+                    "aggregator_version": { "type": "string" }
+                  },
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

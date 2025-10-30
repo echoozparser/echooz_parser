@@ -1,0 +1,102 @@
+2025-10-10T20:50:34.915434 | SuSa zum 31.07.2025 Update1.xlsx | SuSa | SKR03 | OK (0) | 374 Zeilen
+2025-10-10T20:54:25.603929 | SuSa zum 31.07.2025 Update1.xlsx | SuSa | SKR03 | OK (0) | 374 Zeilen
+2025-10-10T21:07:56.261340 | SuSa zum 31.07.2025 Update1.xlsx | SuSa | SKR03 | OK (0) | 375 Zeilen | Cleanliness: 77.7%
+2025-10-10T21:19:05.658207 | SuSa zum 31.07.2025 Update1.xlsx | SuSa | SKR03 | OK (0.0) | 375 Zeilen | Cleanliness: 77.7%
+2025-10-10T21:24:33.754393 | SuSa zum 31.07.2025 Update1.xlsx | SuSa | SKR03 | OK (0.0) | 375 Zeilen | Cleanliness: 82.0%
+2025-10-12T17:34:43.994395 | Summen Saldenliste 31.12.2024.xlsx | Unbekannt | Unbekannt | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T17:34:44.036194 | Summen Saldenliste 31.12.2024.xlsx | Unbekannt | Unbekannt | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T17:41:21.109520 | Summen Saldenliste 31.12.2024.xlsx | SuSa | SKR03 | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T17:41:21.146492 | Summen Saldenliste 31.12.2024.xlsx | SuSa | SKR03 | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T17:58:43.475947 | Summen Saldenliste 31.12.2024.xlsx | Unbekannt | Unbekannt | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T17:58:43.512619 | Summen Saldenliste 31.12.2024.xlsx | Unbekannt | Unbekannt | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T18:03:49.468499 | Summen Saldenliste 31.12.2024.xlsx | SuSa | SKR03 | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T18:03:49.511046 | Summen Saldenliste 31.12.2024.xlsx | SuSa | SKR03 | OK (0.0) | 453 Zeilen | Cleanliness: 55.5%
+2025-10-12T18:11:37.431332 | DIN 09-24.xlsx | Unbekannt | Unbekannt | Nicht geprüft (None) | 732 Zeilen | Cleanliness: 70.5%
+2025-10-12T18:26:58.244304 | 12168_10284_2024_Summen und Salden (pro Monat).xlsx | SuSa | SKR03 | Warnung (-1025854.82) | 200 Zeilen | Cleanliness: 88.0%
+2025-10-12T18:40:45.995417 | Sachkonto - Summen Saldenliste_2024_20250721.xlsx | Unbekannt | SKR03 | Nicht geprüft (None) | 1469 Zeilen | Cleanliness: 78.3%
+2025-10-12T20:36:31.804587 | 12168_10284_2024_Summen und Salden (pro Monat).xlsx | Unstrukturierter Export | Unbekannt | Nicht geprüft (None) | 201 Zeilen | Clean 80% | System: Unbekannt
+2025-10-12T20:40:57.998082 | Summen Saldenliste 31.12.2024.xlsx | SuSa | Unbekannt | Nicht geprüft (None) | 463 Zeilen | Clean 70.0% | System: Unbekannt
+2025-10-12T20:40:58.016363 | Summen Saldenliste 31.12.2024.xlsx | SuSa | Unbekannt | Nicht geprüft (None) | 463 Zeilen | Clean 70.0% | System: Unbekannt
+2025-10-12T21:03:44.628557 | Summen Saldenliste 31.12.2024.xlsx | SuSa (60%) | SKR03 | OK (0.0) | 453 Zeilen | Clean 55.7% | System: Sage
+2025-10-12T21:03:44.672483 | Summen Saldenliste 31.12.2024.xlsx | SuSa (60%) | SKR03 | OK (0.0) | 453 Zeilen | Clean 55.7% | System: Sage
+2025-10-12T21:08:28.533709 | SuSa zum 31.07.2025 Update1.xlsx | Unbekannt (0%) | Unbekannt | Nicht geprüft (None) | 379 Zeilen | Clean 75.0% | System: Unbekannt
+2025-10-12T21:36:56.890788 | SuSa zum 31.07.2025 Update1.xlsx | SuSa (85%) | SKR03 | OK (0.0) | 375 Zeilen | Clean 82.6% | System: Lexware
+2025-10-13T20:52:46.724267 | SuSa zum 31.07.2025 Update1.xlsx | SuSa (85%) | SKR03 | OK (0.0) | 375 Zeilen | Clean 82.6% | System: Lexware
+2025-10-14T20:59:20.148050 | test_1.xlsx | Unbekannt (0%) | Unbekannt | Nicht geprüft (None) | 216 Zeilen | Clean 67.8% | System: Unbekannt
+2025-10-14T21:19:30.072332 | test_1.xlsx | Unbekannt (0%) | Unbekannt | Nicht geprüft (None) | 215 Zeilen | Clean 67.8% | System: Unbekannt
+2025-10-16T09:02:11.169430 | test_1.xlsx | Unbekannt (0%) | Unbekannt | Nicht geprüft (None) | 215 Zeilen | Clean 67.8% | System: Unbekannt
+2025-10-16T09:17:03.131280 | test_1.xlsx | Unbekannt (0%) | Unbekannt | Nicht geprüft (None) | 215 Zeilen | Clean 67.8% | System: Unbekannt
+2025-10-16T10:00:47.626801 | test_1.xlsx | Unbekannt (0%) | Unbekannt | Nicht geprüft (None) | 215 Zeilen | Clean 67.8% | System: Unbekannt
+2025-10-16T10:05:59.103411 | test_1.xlsx | Unbekannt (0%) | Unbekannt | Nicht geprüft (None) | 215 Zeilen | Clean 67.8% | System: Unbekannt
+2025-10-16T11:26:57.530322 | test_1.xlsx | Unbekannt (90%) | Learning:none
+2025-10-16T11:32:23.254204 | test_2.xlsx | SuSa (40%) | Learning:learned
+2025-10-16T11:32:23.342208 | test_2.xlsx | Unbekannt (40%) | Learning:none
+2025-10-16T11:32:23.386936 | test_2.xlsx | SuSa (40%) | Learning:learned
+2025-10-16T11:32:23.504159 | test_2.xlsx | SuSa (40%) | Learning:learned
+2025-10-16T11:46:52.386655 | test_2.xlsx | SuSa (40%) | Learning:learned
+2025-10-16T12:50:06.043724 | test_1.xlsx | Unbekannt (0.0%) | 264 Zeilen
+2025-10-16T12:52:46.366315 | test_2.xlsx | SuSa (4.8%) | 303 Zeilen
+2025-10-16T12:58:41.784573 | test_2.xlsx | SuSa (4.8%) | 303 Zeilen
+2025-10-16T13:06:15.730362 | test_2.xlsx | SuSa (4.8%) | 303 Zeilen
+2025-10-16T13:54:37.046455 | test_3.xlsx | Unbekannt (0.0%) | 284 Zeilen
+2025-10-16T13:54:37.075029 | test_3.xlsx | SuSa (64.3%) | 284 Zeilen
+2025-10-16T13:54:37.096502 | test_3.xlsx | Unbekannt (0.0%) | 264 Zeilen
+2025-10-16T13:55:55.557517 | test_4.xlsx | SuSa (66.7%) | 311 Zeilen
+2025-10-16T13:55:55.577820 | test_4.xlsx | SuSa (57.1%) | 311 Zeilen
+2025-10-16T13:55:55.597684 | test_4.xlsx | SuSa (66.7%) | 260 Zeilen
+2025-10-16T13:58:06.009045 | Test_6.xlsx | SuSa (11.1%) | 313 Zeilen
+2025-10-17T20:24:24.642075 | test_1.xlsx | SuSa (41.7%) | 264 Zeilen
+2025-10-17T20:25:22.072251 | test_2.xlsx | SuSa (9.5%) | 297 Zeilen
+2025-10-17T20:25:55.720535 | test_3.xlsx | SuSa (75.0%) | 284 Zeilen
+2025-10-17T20:25:55.731190 | test_3.xlsx | SuSa (64.3%) | 284 Zeilen
+2025-10-17T20:25:55.740898 | test_3.xlsx | Unbekannt (100.0%) | 264 Zeilen
+2025-10-17T20:26:25.410556 | test_4.xlsx | SuSa (66.7%) | 311 Zeilen
+2025-10-17T20:26:25.421239 | test_4.xlsx | SuSa (57.1%) | 311 Zeilen
+2025-10-17T20:26:25.430454 | test_4.xlsx | SuSa (66.7%) | 260 Zeilen
+2025-10-17T20:26:53.492972 | test_5.xlsm | SuSa (10.0%) | 154 Zeilen
+2025-10-17T20:26:53.502142 | test_5.xlsm | SuSa (8.3%) | 154 Zeilen
+2025-10-17T20:26:53.512078 | test_5.xlsm | SuSa (33.3%) | 145 Zeilen
+2025-10-17T20:26:53.517502 | test_5.xlsm | SuSa (33.3%) | 129 Zeilen
+2025-10-17T20:29:40.334802 | Test_6.xlsx | SuSa (11.1%) | 313 Zeilen
+2025-10-17T20:49:18.865443 | Test_6.xlsx | SuSa (11.1%) | 313 Zeilen
+2025-10-17T20:54:43.802361 | Test_6.xlsx | SuSa (11.1%) | 313 Zeilen
+2025-10-17T21:12:53.842601 | Test_6.xlsx | Unbekannt (0.0%) | 313 Zeilen
+2025-10-17T21:16:52.589379 | Test_6.xlsx | Unbekannt (0.0%) | 313 Zeilen
+2025-10-17T21:26:27.202699 | Test_6.xlsx | SuSa (100.0%) | 313 Zeilen
+2025-10-17T21:28:21.436244 | test_1.xlsx | SuSa (90%) | 264 Zeilen
+2025-10-17T21:30:24.459006 | test_2.xlsx | Unbekannt (40%) | 303 Zeilen
+2025-10-17T21:31:50.907126 | test_3.xlsx | SuSa (90%) | 284 Zeilen
+2025-10-17T21:31:50.926002 | test_3.xlsx | SuSa (90%) | 284 Zeilen
+2025-10-17T21:31:50.945618 | test_3.xlsx | Unbekannt (40%) | 264 Zeilen
+2025-10-17T21:32:21.382617 | test_4.xlsx | SuSa (90%) | 311 Zeilen
+2025-10-17T21:32:21.403920 | test_4.xlsx | SuSa (90%) | 311 Zeilen
+2025-10-17T21:32:21.426112 | test_4.xlsx | SuSa (90%) | 260 Zeilen
+2025-10-17T21:32:54.926805 | test_5.xlsm | SuSa (90%) | 154 Zeilen
+2025-10-17T21:32:54.936237 | test_5.xlsm | SuSa (90%) | 154 Zeilen
+2025-10-17T21:32:54.946563 | test_5.xlsm | SuSa (90%) | 145 Zeilen
+2025-10-17T21:32:54.954665 | test_5.xlsm | SuSa (90%) | 129 Zeilen
+2025-10-17T21:33:20.016923 | Test_6.xlsx | SuSa (100.0%) | 313 Zeilen
+2025-10-17T21:33:47.783548 | Test_7.xlsm | SuSa (90%) | 134 Zeilen
+2025-10-17T21:33:47.794150 | Test_7.xlsm | SuSa (90%) | 134 Zeilen
+2025-10-17T21:33:47.803767 | Test_7.xlsm | SuSa (90%) | 125 Zeilen
+2025-10-17T21:35:39.436829 | Test_8.xlsm | SuSa (90%) | 73 Zeilen
+2025-10-17T21:35:39.453140 | Test_8.xlsm | SuSa (90%) | 134 Zeilen
+2025-10-17T21:35:39.466613 | Test_8.xlsm | SuSa (90%) | 134 Zeilen
+2025-10-17T21:35:39.477770 | Test_8.xlsm | SuSa (90%) | 56 Zeilen
+2025-10-17T22:06:46.209998 | test_3.xlsx | SuSa (66.7%) | 284 Zeilen
+2025-10-17T22:06:46.238487 | test_3.xlsx | SuSa (66.7%) | 284 Zeilen
+2025-10-17T22:06:46.262955 | test_3.xlsx | Unbekannt (66.7%) | 264 Zeilen
+2025-10-17T22:07:06.057523 | test_5.xlsm | SuSa (100.0%) | 154 Zeilen
+2025-10-17T22:07:06.068153 | test_5.xlsm | SuSa (100.0%) | 154 Zeilen
+2025-10-17T22:07:06.078235 | test_5.xlsm | SuSa (66.7%) | 145 Zeilen
+2025-10-17T22:07:06.084038 | test_5.xlsm | SuSa (66.7%) | 129 Zeilen
+2025-10-17T22:07:21.272389 | Test_7.xlsm | SuSa (100.0%) | 134 Zeilen
+2025-10-17T22:07:21.285945 | Test_7.xlsm | SuSa (100.0%) | 134 Zeilen
+2025-10-17T22:07:21.298433 | Test_7.xlsm | SuSa (66.7%) | 125 Zeilen
+2025-10-17T22:07:21.318048 | Test_7.xlsm | Unbekannt (40%) | 107 Zeilen
+2025-10-17T22:07:38.306756 | Test_8.xlsm | SuSa (100.0%) | 73 Zeilen
+2025-10-17T22:07:38.318033 | Test_8.xlsm | SuSa (100.0%) | 134 Zeilen
+2025-10-17T22:07:38.330119 | Test_8.xlsm | Unbekannt (40%) | 139 Zeilen
+2025-10-17T22:07:38.336282 | Test_8.xlsm | SuSa (66.7%) | 56 Zeilen
+2025-10-17T22:08:15.024008 | Test_9.xlsx | SuSa (66.7%) | 233 Zeilen
+2025-10-17T22:08:15.049012 | Test_9.xlsx | SuSa (66.7%) | 235 Zeilen

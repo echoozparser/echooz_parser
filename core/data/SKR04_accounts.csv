@@ -1,0 +1,1256 @@
+konto;bezeichnung
+0001;Ausstehende Einlagen auf das
+0040;Ausstehende Einlagen , davon
+0095;Aufwendungen für die Ingang setzung
+0100;Entgeltlich erworbene Konzessionen ,
+0110;Konzessionen
+0120;Gewerbliche Schutzrechte
+0130;Ähnliche Rechte und Werte
+0135;EDV-Software
+0140;Lizenzen an gewerblichen Schutzrechten und
+0143;Selbst geschaffene gewerbliche
+0144;EDV-Software
+0145;Lizenzen und Franchiseverträge
+0146;Konzessionen und gewerbliche Schutzrechte
+0147;Rezepte, Verfahren, Prototypen
+0148;Immaterielle Vermögen sgegen stände in
+0150;Geschäfts- oder Firmenwert Geschäfts- oder Firmenwert Geschäfts-, Firmen- oder Praxiswert
+0160;Verschmelzungsmehrwert
+0170;Geleistete Anzahlungen Geleistete Anzahlungen auf immaterielle
+0179;Anzahlungen auf Geschäfts- oder Firmenwert
+0200;Grundstücke, grundstücksgleiche
+0210;Grundstücksgleiche Rechte ohne Bauten grundstücksgleiche Rechte ohne Bauten
+0215;Unbebau te Grundstücke unbebau te Grundstücke
+0220;Grundstücksgleiche Rechte (Erbbau recht,
+0225;Grundstücke mit Substanzverzehr unbebau te Grundstücke
+0230;Bauten auf eigenen Grundstücken und
+0235;Grundstückswerte eigene r bebau ter
+0240;Geschäftsbauten
+0250;Fabrikbauten
+0260;Andere Bauten
+0270;Garagen
+0280;Außenan lagen für Geschäfts-, Fabrik- und
+0285;Hof- und Wegebe festigunge n
+0290;Einrichtungen für Geschäfts-, Fabrik- und
+0300;Wohnbau ten
+0305;Garagen
+0310;Außenan lagen
+0315;Hof- und Wegebe festigunge n
+0320;Einrichtungen für Wohnbau ten
+0330;Bauten auf fremden Grundstücken Bauten auf fremden Grundstücken
+0340;Geschäftsbauten
+0350;Fabrikbauten
+0360;Wohnbau ten
+0370;Andere Bauten
+0380;Garagen
+0390;Außenan lagen
+0395;Hof- und Wegebe festigunge n
+0398;Grundstücke, grundstücksgleiche
+0400;Technische Anlagen und Maschinen Technische Anlagen und Maschinen technische Anlagen und Maschinen
+0420;Technische Anlagen
+0440;Maschinen
+0450;Transportanlagen und Ähnliches
+0460;Maschinengebundene Werkzeuge
+0470;Betriebsvorrichtunge n
+0500;Andere Anlagen , Betriebs- und
+0510;Andere Anlagen
+0520;Pkw
+0540;Lkw
+0560;Sonstige Transportmittel
+0620;Werkzeuge
+0630;Betriebsausstattung
+0635;Geschäftsausstattung
+0640;Ladene inrichtung
+0650;Büroeinrichtung
+0660;Gerüst- und Schalungsmaterial
+0670;Geringwertige Wirtschaftsgüter
+0675;Wirtschaftsgüter größer 150 bis 1000 Euro
+0680;Einbau ten in fremde Grundstücke
+0690;Sonstige Betriebs- und Geschäftsausstattung
+0700;Geleistete Anzahlungen und Anlagen
+0705;Anzahlungen auf Grundstücke und
+0710;Geschäfts-, Fabrik- und ande re Bauten im Bau
+0720;Anzahlungen auf Geschäfts-, Fabrik- und
+0725;Wohnbau ten im Bau auf eigenen Grundstücken
+0735;Anzahlungen auf Wohnbau ten auf eigenen
+0740;Geschäfts-, Fabrik- und ande re Bauten im Bau
+0750;Anzahlungen auf Geschäfts-, Fabrik- und
+0755;Wohnbau ten im Bau auf fremden
+0765;Anzahlungen auf Wohnbau ten auf fremden
+0770;Technische Anlagen und Maschinen im Bau
+0780;Anzahlungen auf technische Anlagen und
+0785;Andere Anlagen , Betriebs- und
+0795;Anzahlungen auf ande re Anlagen , Betriebs-
+0800;Anteile an verbundenen Unternehmen Anteile an verbundenen Unternehmen
+0803;Anteile an verbundenen Unternehmen,
+0804;Anteile an verbundenen Unternehmen,
+0805;Anteile an herrschende r oder mehrheitlich
+0808;Anteile an herrschende r oder mehrheitlich
+0809;Anteile an herrschende r oder mit Mehrheit
+0810;Ausleihungen an verbundene
+0813;Ausleihungen an verbundene Unternehmen,
+0814;Ausleihungen an verbundene Unternehmen,
+0815;Ausleihungen an verbundene
+0820;Beteiligungen Beteiligunge n sonstige Beteiligungen , nach
+0830;Typisch stille Beteiligunge n typisch stille Beteiligung
+0840;Atypisch stille Beteiligunge n atypisch stille Beteiligung
+0850;Beteiligungen an Kapitalgesellschaften Beteiligungen an Kapitalgesellschaften
+0860;Beteiligungen an Personenge sellschaften Beteiligungen an
+0880;Ausleihungen an Unternehmen, mit
+0883;Ausleihungen an Unternehmen, mit denen ein
+0885;Ausleihungen an Unternehmen, mit denen ein
+0900;Wertpapiere des Anlagevermögen s Wertpapiere des Anlagevermögen s Wertpapiere des Anlagevermögen s
+0910;Wertpapiere mit
+0920;Festverzinsliche Wertpapiere
+0930;sonstige Ausleihungen Sonstige Ausleihunge n sonstige Ausleihunge n
+0940;Darlehen
+0960;Ausleihungen an Gesellschafter Ausleihungen an Gesellschafter, nicht
+0961;Ausleihungen an GmbH-Gesellschafter Ausleihungen an GmbH-Gesellschafter
+0964;Ausleihungen an stille Gesellschafter
+0970;Ausleihungen an nahe stehende Personen sonstige Ausleihunge n
+0980;Genossenschaftsanteile Genossenschaftsanteile zum langfristigen
+0990;Rückdeckungsansprüche aus
+1040;Unfertige Erzeugn isse, unfertige
+1050;Unfertige Erzeugn isse (Bestand)
+1080;Unfertige Leistungen (Bestand)
+1090;In Ausführung befindliche Bauau fträge In Ausführung befindliche Bauau fträge
+1095;In Arbeit befindliche Aufträge In Arbeit befindliche Aufträge
+1100;Fertige Erzeugn isse und Waren Fertige Erzeugn isse und Waren (Bestand) fertige Erzeugn isse und Waren
+1110;Fertige Erzeugn isse (Bestand)
+1180;Geleistete Anzahlungen (Vorräte) Geleistete Anzahlungen auf Vorräte geleistete Anzahlungen (Vorräte)
+1181;Geleistete Anzahlungen 7 % Vorsteuer
+1184;Geleistete Anzahlungen 16 % Vorsteuer
+1185;Geleistete Anzahlungen 15 % Vorsteuer
+1186;Geleistete Anzahlungen 19 % Vorsteuer
+1190;Erhaltene Anzahlungen auf
+1200;Forderungen aus Lieferungen und
+1221;Forderungen aus Lieferungen und Leistungen
+1225;Forderungen aus Lieferungen und Leistungen
+1230;Wechsel aus Lieferungen und Leistunge n
+1231;Wechsel aus Lieferungen und Leistungen -
+1232;Wechsel aus Lieferungen und Leistungen -
+1235;Wechsel aus Lieferungen und Leistungen ,
+1240;Zweifelhafte Forderunge n
+1241;Zweifelhafte Forderungen - Restlaufzeit bis 1
+1245;Zweifelhafte Forderungen - Restlaufzeit größer
+1246;Forderungen aus Lieferungen und
+1247;Einzelwertberichtigungen auf Forderungen -
+1248;Pauschalwertberichtigung auf Forderungen -
+1249;Pauschalwertberichtigung auf Forderungen -
+1250;Forderungen aus Lieferungen und
+1251;Forderungen aus Lieferungen und Leistungen
+1255;Forderungen aus Lieferungen und Leistungen
+1258;Forderungen aus Lieferungen und
+1259;Forderungen aus Lieferungen und
+1260;Forderungen gegen verbundene
+1261;Forderungen gegen verbundene
+1265;Forderungen gegen verbundene
+1266;Besitzwechsel gegen verbundene
+1267;Forderungen gegen verbundene
+1268;Besitzwechsel gegen verbundene
+1269;Besitzwechsel gegen verbundene
+1270;Forderungen aus Lieferungen und Leistungen
+1271;Forderungen aus Lieferungen und Leistungen
+1275;Forderungen aus Lieferungen und Leistungen
+1276;Forderungen gegen verbundene
+1277;Wertberichtigungen auf Forderungen gegen
+1280;Forderungen gegen Unternehmen, mit
+1281;Forderungen gegen Unternehmen, mit denen
+1285;Forderungen gegen Unternehmen, mit denen
+1286;Besitzwechsel gegen Unternehmen, mit denen
+1287;Besitzwechsel gegen Unternehmen, mit denen
+1288;Besitzwechsel gegen Unternehmen, mit denen
+1289;Besitzwechsel gegen Unternehmen, mit denen
+1290;Forderungen aus Lieferungen und Leistungen
+1291;Forderungen aus Lieferungen und Leistungen
+1295;Forderungen aus Lieferungen und Leistungen
+1296;Forderungen gegen Unternehmen, mit
+1297;Wertberichtigungen auf Forderungen gegen
+1298;Eingeforderte, noch ausstehende
+1299;Eingeforderte Nachschüsse Nachschüsse (Forderungen , Gegen konto 2929 ) Übrige sonstige
+1300;Sonstige Vermögen sgegen stände Sonstige Vermögen sgegen stände
+1301;Sonstige Vermögen sgegen stände -
+1305;Sonstige Vermögen sgegen stände -
+1307;Forderungen gegen GmbH-Gesellschafter Sonstige Vermögen sgegen stände
+1308;Forderungen gegen GmbH-Gesellschafter -
+1309;Forderungen gegen GmbH-Gesellschafter -
+1310;Sonstige Vermögen sgegen stände Forderungen gegen Vorstandsmitglieder und
+1311;Forderungen gegen Vorstandsmitglieder und
+1315;Forderungen gegen Vorstandsmitglieder und
+1320;Forderungen gegen Aufsichtsrats- und
+1321;Forderungen gegen Aufsichtsrats- und
+1325;Forderungen gegen Aufsichtsrats- und
+1330;Forderungen gegen sonstige Gesellschafter Sonstige Vermögen sgegen stände
+1331;Forderungen gegen sonstige Gesellschafter -
+1335;Forderungen gegen sonstige Gesellschafter -
+1337;Forderungen gegen typisch stille
+1338;Forderungen gegen typisch stille
+1339;Forderungen gegen typisch stille
+1340;Forderungen gegen Personal aus Lohn - und
+1341;Forderungen gegen Personal aus Lohn - und
+1345;Forderungen gegen Personal aus Lohn - und
+1350;Kautionen Übrige sonstige
+1351;Kautionen - Restlaufzeit bis 1 Jahr
+1355;Kautionen - Restlaufzeit größer 1 Jahr
+1360;Darlehen
+1361;Darlehen - Restlaufzeit bis 1 Jahr
+1365;Darlehen - Restlaufzeit größer 1 Jahr
+1369;Forderungen gegenübe r Krankenkassen aus
+1370;Sonstige Vermögen sgegen stände oder
+1374;Fremdgeld
+1375;Sonstige Vermögen sgegen stände Agenturwarenab rechnun g
+1376;Sonstige Vermögen sgegen stände oder
+1377;Zurückzuzahlende Vorsteuer, § 15a Abs. 2
+1378;Sonstige Vermögen sgegen stände Ansprüche aus Rückdeckungsversicherunge n Rückdeckungsansprüche aus
+1380;Vermögen sgegen stände zur Erfüllung von
+1381;Aktiver Unterschiedsbetrag aus der
+1382;Sonstige Vermögen sgegen stände Vermögen sgegen stände zur Erfüllung von mit
+1383;Aktiver Unterschiedsbetrag aus der
+1390;Sonstige Vermögen sgegen stände GmbH-Anteile zum kurzfristigen Verbleib Übrige sonstige
+1391;Forderungen gegen Arbeitsgemeinschaften Forderungen gegen
+1393;Genussrechte Genussrechte
+1394;Einzahlungsansprüche zu Neben leistungen
+1395;Sonstige Vermögen sgegen stände Genossenschaftsanteile zum kurzfristigen
+1396;Sonstige Vermögen sgegen stände oder
+1397;Zurückzuzahlende Vorsteuer, § 15a Abs. 1
+1398;Nachträglich abziehba re Vorsteuer gem. § 15a
+1399;Zurückzuzahlende Vorsteuer gem. § 15a Abs.
+1400;Abziehba re Vorsteuer
+1401;Abziehba re Vorsteuer 7 %
+1402;Abziehba re Vorsteuer aus
+1404;Abziehba re Vorsteuer aus
+1406;Abziehba re Vorsteuer 19 %
+1407;Abziehba re Vorsteuer nach § 13b UStG 19 %
+1408;Abziehba re Vorsteuer nach § 13b UStG
+1410;Aufzuteilende Vorsteuer
+1411;Aufzuteilende Vorsteuer 7 %
+1412;Aufzuteilende Vorsteuer aus
+1413;Aufzuteilende Vorsteuer aus
+1416;Aufzuteilende Vorsteuer 19 %
+1417;Aufzuteilende Vorsteuer nach §§ 13a/13b UStG
+1419;Aufzuteilende Vorsteuer nach §§ 13a/13b
+1420;Sonstige Vermögen sgegen stände Umsatzsteuerforderunge n
+1421;Sonstige Vermögen sgegen stände oder
+1422;Sonstige Vermögen sgegen stände Umsatzsteuerforderungen Vorjahr
+1425;Umsatzsteuerforderungen frühere Jahre
+1427;Forderungen aus entrichteten
+1431;Sonstige Vermögen sgegen stände oder
+1432;Abziehba re Vorsteuer aus
+1433;Bezahlte Einfuhrumsatzsteuer
+1434;Vorsteuer im Folgejahr abziehba r
+1435;Sonstige Vermögen sgegen stände Forderungen aus
+1436;Sonstige Vermögen sgegen stände oder
+1440;Sonstige Vermögen sgegen stände Steuererstattungsansprüche gegenübe r
+1450;Körperschaftsteuerrückforderung Körperschaftsteuerüberzahlunge n
+1452;Körperschaftsteuerguthaben nach § 37 KStG -
+1453;Körperschaftsteuerguthaben nach § 37 KStG -
+1456;Forderungen an das Finanzamt aus
+1457;Forderungen gegenübe r Bunde sagen tur für
+1460;Sonstige Vermögen sgegen stände oder
+1484;Vorsteuer nach allgemeinen
+1490;Sonstige Vermögen sgegen stände oder
+1495;Sonstige Verbindlichkeiten Verrechnung skonto erhaltene Anzahlungen bei
+1498;Sonstige Vermögen sgegen stände oder
+1500;Anteile an verbundenen Unternehmen Anteile an verbundenen Unternehmen
+1504;Anteile an herrschende r oder mit Mehrheit
+1505;Eigene Anteile eigene Anteile
+1510;Sonstige Wertpapiere Sonstige Wertpapiere sonstige Wertpapiere des
+1520;Finanzwechsel
+1525;Andere Wertpapiere mit unwesentlichen
+1530;Wertpapieranlagen im Rahmen der
+1550;Kassenbe stand, Bunde sbankguthaben ,
+1600;Kasse Kasse
+1610;Neben kasse 1
+1620;Neben kasse 2
+1700;Kassenbe stand, Bunde sbankguthaben ,
+1710;Bank (Postbank 1)8)
+1720;Bank (Postbank 2)8)
+1730;Bank (Postbank 3)8)
+1780;LZB-Guthabe n Bunde sbankguthabe n
+1790;Bunde sbankguthabe n
+1800;Bank Guthaben bei Kreditinstituten
+1810;Bank 1
+1820;Bank 2
+1830;Bank 3
+1840;Bank 4
+1850;Bank 5
+1890;Finanzmittelanlagen im Rahmen der
+1895;Verbindlichkeiten gegenübe r
+1900;Rechnung sabgrenzungsposten Aktive Rechnung sabgrenzung aktive Rechnung sabgrenzungsposten
+1920;Als Aufwand berücksichtigte Zölle und
+1930;Als Aufwand berücksichtigte Umsatzsteuer auf
+1940;Damnum/Disagio
+1950;Aktive latente Steuern Aktive latente Steuern HB Aktive latente Steuern
+2005;nicht mehr die Zusatzfunktion KU. Bitte
+2007;noch die
+2009;die Erträge zu 40 % als steuerfrei und
+2014;geände rt.
+2900;Gezeichnetes Kapital Gezeichnetes Kapital K gezeichnetes Kapital
+2908;Kapitalerhöhung aus Gesellschaftsmitteln
+2909;Eigene Anteile Erworbene eigene Anteile K Eigene Anteile - offen vom
+2920;Kapitalrücklage Kapitalrücklage K Kapitalrücklage17)
+2925;Kapitalrücklage durch Ausgabe von Anteilen
+2926;Kapitalrücklage durch Ausgabe von
+2927;Kapitalrücklage durch Zuzahlungen gegen
+2928;Kapitalrücklage durch Zuzahlungen in das
+2929;Nachschusskapital (Gegen konto 1299 ) K17)
+2930;Gesetzliche Rücklage Gesetzliche Rücklage K gesetzliche Rücklage17)
+2935;Rücklage für Anteile an einem
+2950;Satzungsmäßige Rücklagen Satzungsmäßige Rücklagen K satzungsmäßige Rücklagen17)
+2960;Andere Gewinnrücklagen Andere Gewinnrücklagen K ande re Gewinnrücklagen17)
+2961;Andere Gewinnrücklagen aus dem Erwerb
+2962;Eigenkapitalanteil von Wertaufholunge n K17)
+2963;Gewinnrücklagen aus den
+2964;Gewinnrücklagen aus den
+2965;Gewinnrücklagen aus den
+2966;Gewinnrücklagen aus den
+2967;Latente Steuern (Gewinnrücklage Haben ) aus
+2968;Latente Steuern (Gewinnrücklage Soll) aus
+2969;Rechnung sabgrenzungsposten
+2970;Gewinn- / Verlustvortrag Gewinnvortrag vor Verwendun g K Gewinn-/Verlustvortrag - bei
+2978;Verlustvortrag vor Verwendun g K17)
+2979;Vortrag auf neue Rechnung Vortrag auf neue Rechnung (Bilanz) K Aufzulösende r Auffangpo sten:
+2980;Sonde rposten mit Rücklagean teil Sonde rposten mit Rücklagean teil, steuerfreie
+2981;Sonde rposten mit Rücklagean teil nach § 6b
+2982;Sonde rposten mit Rücklagean teil nach EStR
+2988;Rücklage für Zuschüsse SB Rücklage für Zuschüsse
+2989;Sonde rposten mit Rücklagean teil nach § 52
+2990;Sonde rposten mit Rücklagean teil,
+2993;Sonde rposten mit Rücklagean teil nach § 7g
+2995;Ausgleichsposten bei Entnahmen § 4g EStG SB ande re Sonde rposten
+2997;Sonde rposten mit Rücklagean teil nach § 7g
+2999;Sonde rposten für Zuschüsse und
+3000;Rückstellungen für Pensionen und
+3005;Rückstellungen für Pensionen und ähnliche
+3009;Rückstellungen für Pensionen und
+3010;Rückstellungen für Pensionen und
+3011;Rückstellungen für Zuschussverpflichtungen
+3015;Rückstellungen für pensionsähnliche
+3020;Steuerrückstellungen (allgemein) Steuerrückstellunge n Steuerrückstellunge n
+3030;Gewerbesteuerrückstellung
+3035;Gewerbesteuerrückstellung, § 4 Abs. 5b EStG
+3040;Körperschaftsteuerrückstellung
+3050;Steuerrückstellung für Steuerstundung (BStBK)
+3060;Rückstellungen für latente Steuern Rückstellungen für latente Steuern
+3065;Passive latente Steuern Passive latente Steuern HB Passive latente Steuern
+3070;Sonstige Rückstellungen Sonstige Rückstellunge n sonstige Rückstellunge n
+3074;Rückstellungen für Personalkosten
+3075;Rückstellungen für unterlassene
+3076;Rückstellungen für mit der Altersversorgung
+3077;Sonstige Rückstellungen oder Aktiver
+3085;Rückstellungen für Abraum- und
+3090;Rückstellungen für Gewährleistungen
+3092;Rückstellungen für drohende Verluste aus
+3095;Rückstellungen für Abschluss- und
+3096;Rückstellungen zur Erfüllung der
+3098;Aufwandsrückstellungen gemäß § 249 Abs. 2
+3099;Rückstellungen für Umweltschutz
+3100;Anleihen Anleihen, nicht konvertibel Anleihen
+3101;Anleihen, nicht konvertibel - Restlaufzeit bis 1
+3105;Anleihen, nicht konvertibel - Restlaufzeit 1 bis
+3110;Anleihen, nicht konvertibel - Restlaufzeit
+3120;Anleihen, konvertibel
+3121;Anleihen, konvertibel - Restlaufzeit bis 1 Jahr
+3125;Anleihen, konvertibel - Restlaufzeit 1 bis 5
+3130;Anleihen, konvertibel - Restlaufzeit größer 5
+3150;Verbindlichkeiten gegenübe r
+3151;Verbindlichkeiten gegenübe r Kreditinstituten -
+3160;Verbindlichkeiten gegenübe r Kreditinstituten -
+3170;Verbindlichkeiten gegenübe r Kreditinstituten -
+3180;Verbindlichkeiten gegenübe r Kreditinstituten
+3181;Verbindlichkeiten gegenübe r
+3190;Verbindlichkeiten gegenübe r Kreditinstituten
+3200;Verbindlichkeiten gegenübe r Kreditinstituten
+3209;bei Aufteilung der
+3249;Verbindlichkeiten gegenübe r
+3250;Erhaltene Anzahlungen auf
+3260;Erhaltene, versteuerte Anzahlungen 7 % USt
+3270;Erhaltene, versteuerte Anzahlungen 16 % USt
+3271;Erhaltene, versteuerte Anzahlungen 15 % USt
+3272;Erhaltene, versteuerte Anzahlungen 19 % USt
+3280;Erhaltene Anzahlungen - Restlaufzeit bis 1
+3284;Erhaltene Anzahlungen - Restlaufzeit 1 bis 5
+3285;Erhaltene Anzahlungen - Restlaufzeit größer 5
+3300;Verbindlichkeiten aus Lieferungen und
+3335;Verbindlichkeiten aus Lieferungen und
+3337;Verbindlichkeiten aus Lieferungen und
+3338;Verbindlichkeiten aus Lieferungen und
+3340;Verbindlichkeiten aus Lieferungen und
+3341;Verbindlichkeiten aus Lieferungen und
+3345;Verbindlichkeiten aus Lieferungen und
+3348;Verbindlichkeiten aus Lieferungen und
+3349;Gegen konto 3335 -3348 , 3420 -3449 , 3470 -
+3350;Verbindlichkeiten aus der Annah me
+3351;Wechselverbindlichkeiten - Restlaufzeit bis 1
+3380;Wechselverbindlichkeiten - Restlaufzeit 1 bis 5
+3390;Wechselverbindlichkeiten - Restlaufzeit größer
+3400;Verbindlichkeiten gegenübe r
+3401;Verbindlichkeiten gegenübe r verbundenen
+3405;Verbindlichkeiten gegenübe r
+3410;Verbindlichkeiten gegenübe r verbundenen
+3420;Verbindlichkeiten aus Lieferungen und
+3421;Verbindlichkeiten aus Lieferungen und
+3425;Verbindlichkeiten aus Lieferungen und
+3430;Verbindlichkeiten aus Lieferungen und
+3450;Verbindlichkeiten gegenübe r
+3451;Verbindlichkeiten gegenübe r Unternehmen,
+3455;Verbindlichkeiten gegenübe r Unternehmen,
+3460;Verbindlichkeiten gegenübe r Unternehmen,
+3470;Verbindlichkeiten aus Lieferungen und
+3471;Verbindlichkeiten aus Lieferungen und
+3475;Verbindlichkeiten aus Lieferungen und
+3480;Verbindlichkeiten aus Lieferungen und
+3499;bei Aufteilung Kreditorenkonto
+3500;Sonstige Verbindlichkeiten Sonstige Verbindlichkeiten übrige sonstige Verbindlichkeiten
+3501;Sonstige Verbindlichkeiten - Restlaufzeit bis 1
+3504;Sonstige Verbindlichkeiten - Restlaufzeit 1 bis
+3507;Sonstige Verbindlichkeiten - Restlaufzeit
+3510;Verbindlichkeiten gegenübe r Gesellschaftern Sonstige Verbindlichkeiten gegenübe r
+3511;Verbindlichkeiten gegenübe r Gesellschaftern -
+3514;Verbindlichkeiten gegenübe r Gesellschaftern -
+3517;Verbindlichkeiten gegenübe r Gesellschaftern -
+3519;Verbindlichkeiten gegenübe r Gesellschaftern
+3520;Darlehen typisch stiller Gesellschafter übrige sonstige Verbindlichkeiten
+3521;Darlehen typisch stiller Gesellschafter -
+3524;Darlehen typisch stiller Gesellschafter -
+3527;Darlehen typisch stiller Gesellschafter -
+3530;Darlehen atypisch stiller Gesellschafter
+3531;Darlehen atypisch stiller Gesellschafter -
+3534;Darlehen atypisch stiller Gesellschafter -
+3537;Darlehen atypisch stiller Gesellschafter -
+3540;Sonstige Verbindlichkeiten Partiarische Darlehen sonstige Verbindlichkeiten aus
+3541;Partiarische Darlehen - Restlaufzeit bis 1 Jahr
+3544;Partiarische Darlehen - Restlaufzeit 1 bis 5
+3547;Partiarische Darlehen - Restlaufzeit größer 5
+3550;Erhaltene Kautionen übrige sonstige Verbindlichkeiten
+3551;Erhaltene Kautionen - Restlaufzeit bis 1 Jahr
+3554;Erhaltene Kautionen - Restlaufzeit 1 bis 5 Jahre
+3557;Erhaltene Kautionen - Restlaufzeit größer 5
+3560;Darlehen
+3561;Darlehen - Restlaufzeit bis 1 Jahr
+3564;Darlehen - Restlaufzeit 1 bis 5 Jahre
+3567;Darlehen - Restlaufzeit größer 5 Jahre
+3599;Gegen konto 3500 -3569 und 3640 -3658 bei
+3600;Agenturwarenab rechnun g
+3610;Kreditkartenab rechnun g
+3611;Verbindlichkeiten gegenübe r
+3620;Sonstige Verbindlichkeiten oder
+3630;Sonstige Verrechnung skonten (Interimskonto)
+3640;Sonstige Verbindlichkeiten Verbindlichkeiten gegenübe r GmbH-
+3641;Verbindlichkeiten gegenübe r GmbH-
+3642;Verbindlichkeiten gegenübe r GmbH-
+3643;Verbindlichkeiten gegenübe r GmbH-
+3655;Verbindlichkeiten gegenübe r stillen
+3656;Verbindlichkeiten gegenübe r stillen
+3657;Verbindlichkeiten gegenübe r stillen
+3658;Verbindlichkeiten gegenübe r stillen
+3695;Sonstige Vermögen sgegen stände Verrechnung skonto geleistete Anzahlungen bei
+3700;Sonstige Verbindlichkeiten Verbindlichkeiten aus Steuern und Abgabe n sonstige Verbindlichkeiten aus Steuern
+3701;Verbindlichkeiten aus Steuern und Abgaben -
+3710;Verbindlichkeiten aus Steuern und Abgaben -
+3715;Verbindlichkeiten aus Steuern und Abgaben -
+3720;Verbindlichkeiten aus Lohn und Gehalt sonstige Verbindlichkeiten gegenübe r
+3725;Verbindlichkeiten für Einbeha ltungen von
+3726;Verbindlichkeiten an das Finanzamt aus
+3730;Sonstige Verbindlichkeiten oder
+3740;Verbindlichkeiten im Rahmen der sozialen
+3741;Verbindlichkeiten im Rahmen der sozialen
+3750;Verbindlichkeiten im Rahmen der sozialen
+3755;Verbindlichkeiten im Rahmen der sozialen
+3759;Voraussichtliche Beitragsschuld gegenübe r
+3760;Sonstige Verbindlichkeiten Verbindlichkeiten aus Einbeha ltungen (KapESt
+3761;Verbindlichkeiten für Verbrauchsteuern
+3770;Sonstige Verbindlichkeiten Verbindlichkeiten aus Vermögen sbildung sonstige Verbindlichkeiten im Rahmen
+3771;Verbindlichkeiten aus Vermögen sbildung -
+3780;Verbindlichkeiten aus Vermögen sbildung -
+3785;Verbindlichkeiten aus Vermögen sbildung -
+3786;Ausgegebene Geschenkgutscheine übrige sonstige Verbindlichkeiten
+3790;Sonstige Verbindlichkeiten oder
+3800;Umsatzsteuer sonstige Verbindlichkeiten aus Steuern
+3801;Umsatzsteuer 7 %
+3802;Umsatzsteuer aus innergemeinschaftlichem
+3804;Umsatzsteuer aus innergemeinschaftlichem
+3806;Umsatzsteuer 19 %
+3807;Umsatzsteuer aus im Inland steuerpflichtigen
+3808;Umsatzsteuer aus im Inland steuerpflichtigen
+3809;Umsatzsteuer aus innergemeinschaftlichem
+3810;Steuerrückstellungen (allgemein) oder
+3811;Umsatzsteuer nicht fällig 7 %
+3812;Umsatzsteuer nicht fällig aus im Inland
+3814;Umsatzsteuer nicht fällig aus im Inland
+3816;Umsatzsteuer nicht fällig 19 %
+3817;Sonstige Verbindlichkeiten Umsatzsteuer aus im ande ren EU-Land
+3818;Umsatzsteuer aus im ande ren EU-Land
+3819;Sonstige Verbindlichkeiten oder
+3820;Umsatzsteuer-Vorauszahlunge n
+3830;Umsatzsteuer-Vorauszahlungen 1/11
+3832;Nachsteuer, UStVA Kz. 65
+3834;Umsatzsteuer aus innergemeinschaftlichem
+3835;Umsatzsteuer nach § 13b UStG
+3837;Umsatzsteuer nach § 13b UStG 19 %
+3839;Umsatzsteuer aus der Auslagerung von
+3840;Umsatzsteuer laufende s Jahr
+3841;Umsatzsteuer Vorjahr
+3845;Umsatzsteuer frühere Jahre
+3850;Einfuhrumsatzsteuer aufgeschoben bis…
+3851;In Rechnung unrichtig oder unbe rechtigt
+3854;Sonstige Verbindlichkeiten Steuerzahlungen an ande re Lände r
+3860;Verbindlichkeiten aus Umsatzsteuer1)
+3900;Rechnung sabgrenzungsposten Passive Rechnung sabgrenzung passive Rechnung sabgrenzungsposten
+3950;Abgrenzung unterjährig pauschal gebu chter
+4100;Steuerfreie Umsätze § 4 Nr. 8 ff UStG U steuerfreie Umsätze nach § 4 Nr. 8 ff
+4105;Steuerfreie Umsätze nach § 4 Nr. 12 UStG
+4110;Sonstige steuerfreie Umsätze Inland U sonstige umsatzsteuerfreie Umsätze
+4120;Steuerfreie Umsätze § 4 Nr. 1a UStG U steuerfreie Umsätze nach § 4 Nr. 1a
+4125;Steuerfreie Innergemeinschaftliche
+4130;Lieferungen des ersten Abneh mers bei
+4135;Steuerfreie innergemeinschaftliche
+4136;Umsatzerlöse nach §§ 25 und 25a UStG 19%
+4137;Umsatzerlöse Regelsteuersatz
+4138;Umsatzerlöse nach §§ 25 und 25a UStG ohne
+4139;Umsatzerlöse aus Reiseleistungen § 25 Abs. 2
+4140;Steuerfreie Umsätze Offshore etc. U sonstige umsatzsteuerfreie Umsätze
+4150;Sonstige steuerfreie Umsätze (z. B. § 4 Nr. 2-7
+4160;Steuerfreie Umsätze ohne Vorsteuerabzug
+4165;Steuerfreie Umsätze ohne Vorsteuerabzug
+4180;Erlöse, die mit den Durchschnittssätzen des §
+4185;Erlöse als Kleinunternehmer i. S. d. § 19 Abs.
+4186;Erlöse aus Geldspielautomaten 19 % USt U Umsatzerlöse Regelsteuersatz
+4200;Erlöse Umsatzerlöse ohne Zuordnung nach
+4330;Erlöse aus im Inland steuerpflichtigen EU-
+4335;Erlöse aus Lieferungen von
+4336;Erlöse aus im ande ren EU-Land
+4337;Erlöse aus Leistungen , für die der
+4338;Erlöse aus im Drittland steuerbaren
+4339;Erlöse aus im ande ren EU-Land steuerbaren
+4410;Erlöse 19 % USt
+4510;Erlöse Abfallverwertung Umsatzerlöse ohne Zuordnung nach
+4520;Erlöse Leergut
+4560;Provisionsumsätze
+4564;Provisionsumsätze, steuerfrei § 4 Nr. 8 ff. UStG U steuerfreie Umsätze nach § 4 Nr. 8 ff
+4565;Provisionsumsätze, steuerfrei § 4 Nr. 5 UStG U steuerfreie Umsätze nach § 4 Nr. 2-7
+4566;Provisionsumsätze 7% USt U Umsatzerlöse ermäßigter Steuersatz
+4569;Provisionsumsätze 19 % USt U Umsatzerlöse Regelsteuersatz
+4570;Sonstige betriebliche Erträge Sonstige Erträge aus Provisionen , Lizenzen
+4574;Sonstige Erträge aus Provisionen , Lizenzen
+4575;Sonstige Erträge aus Provisionen , Lizenzen
+4576;Sonstige Erträge aus Provisionen , Lizenzen
+4579;Sonstige Erträge aus Provisionen , Lizenzen
+4600;Umsatzerlöse Unentgeltliche Wertabgabe n Umsatzerlöse ohne Zuordnung nach
+4656;Unentgeltliche Erbringung einer sonstigen
+4659;Unentgeltliche Erbringung einer sonstigen
+4676;Unentgeltliche Zuwendung von Waren 7 % USt
+4679;Unentgeltliche Zuwendung von Waren ohne
+4689;Unentgeltliche Zuwendung von Gegen ständen
+4690;Umsatzerlöse Nicht steuerbare Umsätze (Innenu msätze) Sonstige Umsatzerlöse, nicht steuerbar
+4695;Umsatzsteuervergütungen , z.B. nach § 24
+4700;Erlösschmälerunge n in Umsatzerlöse (GKV) verrechnete
+4705;Erlösschmälerungen aus steuerfreien
+4723;Erlösschmälerungen 16 % USt
+4724;Umsatzerlöse Erlösschmälerungen aus steuerfreien
+4725;Erlösschmälerungen aus im Inland
+4726;Erlösschmälerungen aus im Inland
+4727;Erlösschmälerungen aus im ande ren EU-Land
+4729;Erlösschmälerungen aus im Inland
+4730;Gewährte Skonti
+4731;Gewährte Skonti 7 % USt
+4736;Gewährte Skonti 19 % USt
+4738;Gewährte Skonti aus Lieferungen von
+4741;Gewährte Skonti aus Leistungen , für die der
+4742;Gewährte Skonti aus Erlöse aus im ande ren
+4743;Gewährte Skonti aus steuerfreien
+4745;Gewährte Skonti aus im Inland
+4746;Gewährte Skonti aus im Inland
+4748;Gewährte Skonti aus im Inland
+4769;Gewährte Boni
+4770;Gewährte Rabatte
+4800;Erhöhung oder Verminderung des
+4810;Bestandsverände rungen - unfertige
+4815;Bestandsverände rungen - unfertige Leistunge n
+4816;Erhöhung oder Verminderung des
+4818;Erhöhung oder Verminderung des
+4820;Andere aktivierte Eigenleistungen Andere aktivierte Eigenleistunge n ande re aktivierte Eigenleistungen (GKV)
+4825;Aktivierte Eigenleistungen zur Erstellung von
+4830;Sonstige betriebliche Erträge Sonstige betriebliche Erträge ande re sonstige betriebliche Erträge
+4832;Sonstige betriebliche Erträge von verbundenen
+4833;Sonstige betriebliche Erträge Andere Nebene rlöse ande re Nebene rlöse
+4834;Sonstige Erlöse betrieblich und regelmäßig 16
+4835;Sonstige Erträge betrieblich und regelmäßig
+4836;Sonstige Erlöse betrieblich und regelmäßig 19
+4837;Sonstige Erträge betriebsfremd und regelmäßig
+4838;Erstattete Vorsteuer ande rer Lände r
+4839;Sonstige Erträge unregelmäßig
+4840;Erträge aus der Währungsumrechnun g Kurs-/Währungsgewinne
+4841;Sonstige Erträge betrieblich und regelmäßig,
+4842;Sonstige betriebliche Erträge, steuerfrei z. B. §
+4843;Erträge aus Bewertung Finanzmittelfonds Kurs-/Währungsgewinne
+4844;Erlöse aus Verkäufen Sachanlagevermögen
+4845;Erlöse aus Verkäufen Sachanlagevermögen 19
+4847;Erträge aus der Währungsumrechnung (nicht
+4848;Erlöse aus Verkäufen Sachanlagevermögen
+4849;Erlöse aus Verkäufen Sachanlagevermögen
+4850;Erlöse aus Verkäufen immaterieller
+4851;Erlöse aus Verkäufen Finanzanlagen (bei
+4852;Erlöse aus Verkäufen Finanzanlagen § 3 Nr.
+4855;Anlagenabgänge Sachanlagen (Restbuchwert
+4856;Anlagenabgänge immaterielle
+4857;Anlagenabgänge Finanzanlagen
+4858;Anlagenabgänge Finanzanlagen § 3 Nr. 40
+4860;Grundstückserträge Nebene rlöse aus Vermietung und
+4861;Erlöse aus Vermietung und Verpachtung,
+4862;Erlöse aus Vermietung und Verpachtung 19%
+4900;Erträge aus dem Abgang von Gegen ständen
+4901;Erträge aus der Veräußerung von Anteilen an
+4905;Erträge aus dem Abgang von Gegen ständen
+4906;Erträge aus dem Abgang von Gegen ständen
+4910;Erträge aus Zuschreibungen des
+4911;Erträge aus Zuschreibungen des
+4912;Erträge aus Zuschreibungen des
+4913;Erträge aus Zuschreibungen des
+4914;Erträge aus Zuschreibungen § 3 Nr. 40 EStG/§
+4915;Erträge aus Zuschreibungen des
+4916;Sonstige betriebliche Erträge Erträge aus Zuschreibungen des
+4920;Erträge aus der Herabsetzung der
+4923;Erträge aus der Herabsetzung der
+4925;Erträge aus abge schriebenen Forderunge n Zahlungseingänge auf in früheren
+4927;Erträge aus der Auflösung einer steuerlichen
+4929;Erträge aus der Auflösung der Rücklage für
+4930;Erträge aus der Auflösung von Rückstellunge n Erträge aus der Auflösung von
+4932;Erträge aus der Herabsetzung von
+4935;Erträge aus der Auflösung einer steuerlichen
+4936;Erträge aus der Auflösung von steuerlichen
+4937;Erträge aus der Auflösung steuerrechtlicher
+4938;Erträge aus der Auflösung einer steuerlichen
+4939;Erträge aus der Auflösung von steuerlichen
+4940;Verrechnete sonstige Sachbezüge (keine
+4941;Sachbezüge 7 % USt (Waren)
+4945;Sachbezüge 19 % USt (Waren)
+4946;Verrechnete sonstige Sachbezüge
+4947;Verrechnete sonstige Sachbezüge aus Kfz-
+4948;Verrechnete sonstige Sachbezüge 19 % USt U Sonstige Sachbezüge
+4949;Verrechnete sonstige Sachbezüge ohne
+4960;Perioden fremde Erträge (soweit nicht
+4970;Versicherungsentschädigungen und
+4972;Erstattungen Aufwendung sausgleichsgesetz
+4975;Investitionszuschüsse (steuerpflichtig) Zuschüsse und Zulagen
+4980;Investitionszulagen (steuerfrei)
+4981;Steuerfreie Erträge aus der Auflösung von
+4982;Sonstige steuerfreie Betriebseinnah men GK ande re sonstige betriebliche Erträge
+4987;Erträge aus der Aktivierung unen tgeltlich
+4989;Kostenerstattungen , Rückvergütungen und
+4992;Erträge aus Verwaltungskostenumlagen Erträge aus Verwaltungskostenumlagen
+5100;Einkauf Roh-, Hilfs- und Betriebsstoffe Aufwendungen ohne Zuordnung nach
+5160;Einkauf Roh-, Hilfs- und Betriebsstoffe,
+5166;Einkauf Roh-, Hilfs- und Betriebsstoffe,
+5167;Einkauf Roh-, Hilfs- und Betriebsstoffe,
+5170;Einkauf Roh-, Hilfs- und Betriebsstoffe 5,5%
+5171;Einkauf Roh-, Hilfs- und Betriebsstoffe 10,7%
+5175;Einkauf Roh-, Hilfs- und Betriebsstoffe aus
+5176;Einkauf Roh-, Hilfs- und Betriebsstoffe aus
+5189;Erwerb Roh-, Hilfs- und Betriebsstoffe als
+5190;Energiestoffe (Fertigung ) Aufwendungen ohne Zuordnung nach
+5191;Energiestoffe (Fertigung ) 7% Vorsteuer Aufwand zum ermäßigten Steuersatz
+5192;Energiestoffe (Fertigung ) 19% Vorsteuer Aufwand zum Regelsteuersatz
+5200;Wareneingan g Wareneinkauf ohne Zuordnung nach
+5430;Innergemeinschaftlicher Erwerb ohne
+5435;Innergemeinschaftlicher Erwerb ohne
+5440;Innergemeinschaftlicher Erwerb von
+5550;Steuerfreier innergemeinschaftlicher Erwerb U Innergemeinschaftliche Erwerbe
+5551;Wareneingang im Drittland steuerbar Wareneinkauf ohne Zuordnung nach
+5552;Erwerb 1. Abneh mer innerhalb eines
+5553;Erwerb Waren als letzter Abneh mer innerhalb
+5558;Wareneingang im ande ren EU-Land steuerbar Wareneinkauf ohne Zuordnung nach
+5559;Steuerfreie Einfuhren
+5560;Waren aus einem Umsatzsteuerlager, § 13a
+5565;Waren aus einem Umsatzsteuerlager, § 13a
+5700;Nachlässe
+5701;Nachlässe aus Einkauf Roh-, Hilfs- und
+5714;Nachlässe aus Einkauf Roh-, Hilfs- und
+5715;Nachlässe aus Einkauf Roh-, Hilfs- und
+5717;Nachlässe aus Einkauf Roh-, Hilfs- und
+5718;Nachlässe aus Einkauf Roh-, Hilfs- und
+5722;Nachlässe 16 % Vorsteuer Wareneinkauf ohne Zuordnung nach
+5723;Nachlässe 15 % Vorsteuer
+5724;Nachlässe aus innergemeinschaftlichem
+5725;Nachlässe aus innergemeinschaftlichem
+5726;Nachlässe aus innergemeinschaftlichem
+5727;Nachlässe aus innergemeinschaftlichem
+5730;Aufwendungen für Roh-, Hilfs- und
+5731;Erhaltene Skonti 7 % Vorsteuer Wareneinkauf zum ermäßigten
+5733;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5734;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5736;Erhaltene Skonti 19 % Vorsteuer Wareneinkauf zum Regelsteuersatz
+5738;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5741;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5743;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5744;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5745;Erhaltene Skonti aus steuerpflichtigem
+5746;Erhaltene Skonti aus steuerpflichtigem
+5748;Erhaltene Skonti aus steuerpflichtigem
+5753;Erhaltene Boni aus Einkauf Roh-, Hilfs- und
+5754;Erhaltene Boni aus Einkauf Roh-, Hilfs- und
+5755;Erhaltene Boni aus Einkauf Roh-, Hilfs- und
+5769;Erhaltene Boni Wareneinkauf ohne Zuordnung nach
+5770;Erhaltene Rabatte
+5783;Erhaltene Rabatte aus Einkauf Roh-, Hilfs- und
+5784;Erhaltene Rabatte aus Einkauf Roh-, Hilfs- und
+5785;Erhaltene Rabatte aus Einkauf Roh-, Hilfs- und
+5788;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5792;Erhaltene Skonti aus Erwerb Roh-, Hilfs- und
+5793;Aufwendungen für Roh-, Hilfs- und
+5794;Erhaltene Skonti 5,5% Vorsteuer Wareneinkauf ohne Zuordnung nach
+5796;Erhaltene Skonti 10,7% Vorsteuer1)
+5798;Erhaltene Skonti aus Einkauf Roh-, Hilfs- und
+5800;Bezugsneben kosten Anschaffungsneben kosten
+5820;Leergut
+5840;Zölle und Einfuhrabgabe n
+5880;Bestandsverände rungen Roh-, Hilfs- und
+5900;Aufwendungen für bezogene
+5906;Fremdleistungen 19% Vorsteuer Übrige Leistungen mit Vorsteuerabzug
+5908;Fremdleistungen 7% Vorsteuer
+5909;Fremdleistungen ohne Vorsteuer Übrige Leistungen ohne Vorsteuerabzug
+5910;Bauleistungen eines im Inland ansässigen
+5913;Sonstige Leistungen eines im ande ren EU-
+5915;Leistungen eines im Ausland ansässigen
+5923;Sonstige Leistungen eines im ande ren EU-
+5930;Bauleistungen eines im Inland ansässigen
+5933;Sonstige Leistungen eines im ande ren EU-
+5935;Leistungen eines im Ausland ansässigen
+5943;Sonstige Leistungen eines im ande ren EU-
+5950;Erhaltene Skonti aus Leistungen , für die als
+5951;Erhaltene Skonti aus Leistungen , für die als
+5953;Erhaltene Skonti aus Leistungen , für die als
+5954;Erhaltene Skonti aus Leistungen , für die als
+5960;Leistungen nach § 13b UStG mit
+5965;Leistungen nach § 13b UStG ohne
+6000;Löhne und Gehälter Löhne und Gehälter übrige und nicht zuordenba re Löhne
+6010;Löhn e
+6020;Gehälter
+6024;Geschäftsführergehä lter der GmbH-
+6026;Tantiemen Gesellschafter-Geschäftsführer K8)
+6027;Geschäftsführergehä lter übrige und nicht zuordenba re Löhne
+6029;Tantiemen Arbeitnehmer K1)
+6030;Aushilfslöhne
+6035;Löhne für Minijobs Löhne für Minijobs
+6036;Pauschale Steuern für Minijobbe r8)
+6037;Pauschale Steuern für Gesellschafter-
+6039;Pauschale Steuern für Arbeitnehmer übrige und nicht zuordenba re Löhne
+6040;Pauschale Steuer für Aushilfen
+6045;Bedienung sgelder
+6060;Freiwillige soziale Aufwendungen ,
+6066;Freiwillige Zuwendungen an Minijobbe r Löhne für Minijobs
+6067;Freiwillige Zuwendungen an Gesellschafter-
+6069;Pauschale Steuer auf sonstige Bezüge (z. B.
+6070;Krankenge ldzuschüsse
+6071;Sachzuwendungen und Dienstleistungen an
+6072;Sachzuwendungen und Dienstleistungen an
+6073;Sachzuwendungen und Dienstleistungen an
+6075;Zuschüsse der Agenturen für Arbeit (Haben ) übrige und nicht zuordenba re Löhne
+6080;Vermögen swirksame Leistunge n
+6090;Fahrtkostenerstattung Wohnung /Arbeitsstätte
+6100;Soziale Abgaben und Aufwendungen
+6110;Gesetzliche soziale Aufwendunge n soziale Abgabe n
+6120;Beiträge zur Berufsgeno ssenschaft
+6130;Freiwillige soziale Aufwendungen ,
+6140;Aufwendungen für Altersversorgung Aufwendungen für Altersversorgung
+6147;Pauschale Steuer auf sonstige Bezüge (z. B.
+6149;Aufwendungen für Altersversorgung für
+6150;Versorgung skassen
+6160;Aufwendungen für Unterstützung Aufwendungen für Unterstützung
+6170;Sonstige soziale Abgabe n soziale Abgabe n
+6171;Soziale Abgaben für Minijobbe r1)
+6200;Abschreibungen auf immaterielle
+6201;Abschreibungen auf selbst geschaffene
+6205;Abschreibungen auf den Geschäfts- oder
+6209;Außerplanmäßige Abschreibungen auf den
+6210;Außerplanmäßige Abschreibungen auf
+6211;Außerplanmäßige Abschreibungen auf selbst
+6220;Abschreibungen auf Sachanlagen (ohne AfA
+6221;Abschreibungen auf Gebäud e
+6222;Abschreibungen auf immaterielle
+6230;Außerplanmäßige Abschreibungen auf
+6231;Absetzung für außergewöhnliche technische
+6232;Absetzung für außergewöhnliche technische
+6233;Absetzung für außergewöhnliche technische
+6240;Abschreibungen auf Sachanlagen auf Grund
+6241;Sonde rabschreibungen nach § 7g Abs. 5 EStG
+6242;Sonde rabschreibungen nach § 7g Abs. 5 EStG
+6243;Kürzung der Anschaffungs- oder
+6244;Kürzung der Anschaffungs- oder
+6250;Kaufleasing Abschreibungen auf immaterielle
+6260;Sofortabschreibung geringwertiger
+6262;Abschreibungen auf aktivierte, geringwertige
+6264;Abschreibungen auf den Sammelposten
+6266;Außerplanmäßige Abschreibungen auf
+6268;Abschreibungen auf Aufwendungen für die
+6270;Abschreibung auf
+6272;Abschreibungen auf Umlaufvermögen ,
+6278;Abschreibungen auf Roh-, Hilfs- und
+6279;Abschreibungen auf fertige und unfertige
+6280;Forderungsverluste (soweit unüb lich hoch) Abschreibungen auf Forderungen und
+6281;Forderungsverluste 7 % USt (soweit unüb lich
+6285;Forderungsverluste 16 % USt (soweit unüb lich
+6286;Forderungsverluste 19 % USt (soweit unüb lich
+6287;Forderungsverluste 15 % USt (soweit unüb lich
+6290;Abschreibungen auf Forderungen gegenübe r
+6291;Abschreibungen auf Forderungen gegenübe r
+6300;Sonstige betriebliche Aufwendungen Sonstige betriebliche Aufwendunge n ande re sonstige betriebliche
+6302;Interimskonto für Aufwendungen in einem
+6303;Sonstige betriebliche Aufwendungen Fremdleistungen /Fremdarbeiten ande re ordentliche / nicht zuordenba re
+6304;Sonstige Aufwendungen betrieblich und
+6305;Raumkosten ande re ordentliche / nicht zuordenba re
+6310;Miete (unbe wegliche Wirtschaftsgüter) GK Übrige / nicht zuordenba re Miete und
+6313;Vergütungen an Gesellschafter für die miet-
+6315;Pacht (unbe wegliche Wirtschaftsgüter) GK Übrige / nicht zuordenba re Miete und
+6316;Leasing (unbe wegliche Wirtschaftsgüter) GK übrige Leasingau fwendunge n
+6317;Aufwendungen für gemietete oder gepa chtete
+6318;Miet- und Pachtneben kosten
+6320;Heizung Aufwendungen für Energie
+6325;Gas, Strom, Wasser
+6330;Reinigung ande re ordentliche / nicht zuordenba re
+6335;Instandha ltung betrieblicher Räume Aufwand für Fremdreparaturen und
+6340;Abgaben für betrieblich genu tzten Grundbe sitz ande re ordentliche / nicht zuordenba re
+6345;Sonstige Raumkosten
+6350;Grundstücksaufwendungen betrieblich Aufwand für Fremdreparaturen und
+6352;Sonstige Grundstücksaufwendungen (neutral) ande re ordentliche / nicht zuordenba re
+6390;Zuwendungen , Spenden , steuerlich nicht
+6391;Zuwendungen , Spenden für wissenschaftliche
+6392;Zuwendungen , Spenden für mildtätige Zwecke
+6393;Zuwendungen , Spenden für kirchliche,
+6394;Zuwendungen , Spenden an politische Parteien
+6395;Zuwendungen , Spenden an Stiftungen für
+6396;Zuwendungen , Spenden an Stiftungen für
+6397;Zuwendungen , Spenden an Stiftungen für
+6398;Zuwendungen , Spenden an Stiftungen für
+6400;Versicherunge n Versicherungsprämien, Gebüh ren und
+6405;Versicherungen für Gebäud e
+6410;Netto-Prämie für Rückdeckung künftiger
+6420;Beiträge
+6430;Sonstige Abgabe n
+6436;Steuerlich abzugsfähige
+6437;Steuerlich nicht abzugsfähige
+6440;Ausgleichsabgabe i. S. d.
+6450;Reparaturen und Instandha ltung von Bauten Aufwand für Fremdreparaturen und
+6460;Reparaturen und Instandha ltung von
+6470;Reparaturen und Instandha ltungen von
+6475;Zuführung zu Aufwandsrückstellunge n Zuführungen zu Aufwandsrückstellunge n
+6485;Reparaturen und Instandha ltung von ande ren
+6490;Sonstige Reparaturen und Instandha ltunge n
+6495;Sonstige betriebliche Aufwendungen Wartungskosten für Hard- und Software Aufwand für Fremdreparaturen und
+6498;Mietleasing (bewegliche Wirtschaftsgüter) GK Leasing für bewegliche Wirtschaftsgüter
+6500;Fahrzeugkosten Aufwendungen für den Fuhrpark18)
+6520;Kfz-Versicherunge n
+6530;Laufende Kfz-Betriebskosten
+6540;Kfz-Reparaturen
+6550;Garagen miete
+6560;Mietleasing Kfz GK Leasing für bewegliche Wirtschaftsgüter
+6570;Sonstige Kfz-Kosten Aufwendungen für den Fuhrpark
+6580;Mautgebüh ren
+6595;Fremdfahrzeugkosten
+6600;Werbekosten Werbeau fwand
+6605;Streuartikel
+6610;Geschenke abzugsfähig ohne § 37b EStG Geschenke abziehba r
+6611;Geschenke abzugsfähig mit § 37b EStG
+6612;Pauschale Steuern für Geschenke und
+6620;Geschenke nicht abzugsfähig ohne § 37b EStG GK Geschenke nicht abziehba r
+6621;Geschenke nicht abzugsfähig mit § 37b EStG
+6622;Pauschale Steuern für Geschenke und
+6625;Geschenke ausschließlich betrieblich genu tzt Geschenke abziehba r
+6629;Zugaben mit § 37b EStG Werbeau fwand
+6630;Repräsentationskosten ande re ordentliche / nicht zuordenba re
+6640;Bewirtungskosten Bewirtungskosten (gesamt)
+6641;Sonstige eingeschränkt abziehba re
+6642;Sonstige eingeschränkt abziehba re
+6643;Aufmerksamkeiten Werbeau fwand
+6644;Nicht abzugsfähige Bewirtungskosten GK Bewirtungskosten (gesamt)
+6645;Nicht abzugsfähige Betriebsausgaben aus
+6650;Reisekosten Arbeitnehmer Reisekosten Arbeitnehmer
+6660;Reisekosten Arbeitnehmer
+6663;Reisekosten Arbeitnehmer Fahrtkosten
+6664;Reisekosten Arbeitnehmer
+6668;Kilometergelderstattung Arbeitnehmer
+6670;Reisekosten Unternehmer ande re ordentliche / nicht zuordenba re
+6672;Reisekosten Unternehmer (nicht abziehba rer
+6673;Reisekosten Unternehmer Fahrtkosten
+6674;Reisekosten Unternehmer
+6700;Kosten der Warenabgab e Frachten / Verpackung
+6710;Verpackungsmaterial
+6740;Ausgang sfrachten
+6760;Transportversicherunge n
+6770;Verkaufsprovisionen Provisionen
+6780;Fremdarbeiten (Vertrieb) ande re ordentliche / nicht zuordenba re
+6790;Aufwand für Gewährleistunge n
+6800;Porto Aufwendungen für Kommunikation
+6805;Telefon
+6810;Telefax und Internetkosten
+6815;Bürobeda rf ande re ordentliche / nicht zuordenba re
+6820;Zeitschriften, Bücher Fortbildung skosten
+6821;Fortbildung skosten
+6822;Freiwillige Sozialleistunge n sonstige Aufwendungen für Personal
+6825;Rechts- und Beratungskosten Rechts- und Beratungskosten
+6827;Abschluss- und Prüfungskosten
+6830;Buchführungskosten
+6833;Vergütungen an Gesellschafter für die miet-
+6835;Sonstige betriebliche Aufwendungen Mieten für Einrichtungen (bewegliche
+6836;Pacht (bewegliche Wirtschaftsgüter)
+6837;Aufwendungen für die zeitlich befristete
+6838;Aufwendungen für gemietete oder gepa chtete
+6840;Mietleasing (bewegliche Wirtschaftsgüter) GK Leasing für bewegliche Wirtschaftsgüter
+6845;Werkzeuge und Kleingeräte ande re ordentliche / nicht zuordenba re
+6850;Sonstiger Betriebsbeda rf
+6855;Neben kosten des Geldverkehrs
+6856;Aufwendungen aus Anteilen an
+6857;Veräußerungskosten § 3 Nr. 40 EStG/§ 8b
+6859;Aufwendungen für Abraum- und
+6860;Nicht abziehba re Vorsteuer sonstige Steuern, soweit in den
+6865;Nicht abziehba re Vorsteuer 7 %
+6871;Nicht abziehba re Vorsteuer 19 %
+6875;Nicht abziehba re Hälfte der
+6876;Abziehba re Aufsichtsratsvergütunge n
+6880;Aufwendungen aus der Währungsumrechnun g Kurs- / Währungsverluste
+6881;Aufwendungen aus der Währungsumrechnung
+6883;Aufwendungen aus Bewertung
+6884;Erlöse aus Verkäufen Sachanlagevermögen
+6885;Erlöse aus Verkäufen Sachanlagevermögen 19
+6888;Erlöse aus Verkäufen Sachanlagevermögen
+6889;Erlöse aus Verkäufen Sachanlagevermögen
+6890;Erlöse aus Verkäufen immaterieller
+6891;Erlöse aus Verkäufen Finanzanlagen (bei
+6892;Erlöse aus Verkäufen Finanzanlagen § 3 Nr.
+6895;Anlagenabgänge Sachanlagen (Restbuchwert
+6896;Anlagenabgänge immaterielle
+6897;Anlagenabgänge Finanzanlagen
+6898;Anlagenabgänge Finanzanlagen § 3 Nr. 40
+6900;Verluste aus dem Abgang von Gegen ständen
+6903;Verluste aus der Veräußerung von Anteilen an
+6905;Verluste aus dem Abgang von Gegen ständen
+6906;Verluste aus dem Abgang von Gegen ständen
+6910;Abschreibungen auf Umlaufvermögen außer
+6912;Sonstige betriebliche Aufwendungen Abschreibungen auf Umlaufvermögen außer
+6916;ande re ordentliche / nicht zuordenba re
+6918;Aufwendungen aus dem Erwerb eigene r Anteile
+6920;Einstellung in die Pauschalwertberichtigung
+6922;Einstellungen in die steuerliche Rücklage nach
+6923;Einstellung in die Einzelwertberichtigung auf
+6927;Einstellungen in steuerliche Rücklagen
+6928;Einstellungen in die Rücklage für
+6929;Einstellungen in die steuerliche Rücklage nach
+6930;Forderungsverluste (übliche Höhe) übliche Abschreibungen auf
+6931;Forderungsverluste 7 % USt (übliche Höhe)
+6932;Forderungsverluste aus steuerfreien EU-
+6933;Forderungsverluste aus im Inland
+6934;Forderungsverluste aus im Inland
+6935;Forderungsverluste 16 % USt (übliche Höhe)
+6936;Forderungsverluste 19 % USt (übliche Höhe)
+6937;Forderungsverluste 15 % USt (übliche Höhe)
+6938;Forderungsverluste aus im Inland
+6939;Forderungsverluste aus im Inland
+6960;Perioden fremde Aufwendungen soweit nicht
+6967;Sonstige Aufwendungen betriebsfremd und
+6968;Sonstige nicht abziehba re Aufwendunge n GK ande re ordentliche / nicht zuordenba re
+6969;Sonstige Aufwendungen unregelmäßig ande re sonstige betriebliche
+6970;Kalkulatorischer Unternehmerlohn ande re ordentliche / nicht zuordenba re
+6972;Kalkulatorische Miete und Pacht
+6974;Kalkulatorische Zinsen
+6976;Kalkulatorische Abschreibunge n
+6978;Kalkulatorische Wagnisse
+6979;Kalkulatorischer Lohn für unen tgeltliche
+6980;Verrechneter kalkulatorischer Unternehmerlohn
+6982;Verrechnete kalkulatorische Miete/Pacht
+6984;Verrechnete kalkulatorische Zinsen
+6986;Verrechnete kalkulatorische Abschreibunge n
+6988;Verrechnete kalkulatorische Wagnisse
+6989;Verrechneter kalkulatorischer Lohn für
+6990;Herstellungskosten
+6992;Verwaltungskosten
+6994;Vertriebskosten
+6999;Gegen konto 6990 -6998
+7000;Erträge aus Beteiligungen Erträge aus Beteiligunge n Erträge aus Beteiligungen , nach
+7004;Erträge aus Beteiligungen an
+7005;Erträge aus Anteilen an Kapitalgesellschaften
+7006;Erträge aus Anteilen an Kapitalgesellschaften
+7008;Gewinnan teile aus gewerblichen und
+7009;Erträge aus Beteiligungen an verbundenen
+7010;Erträge aus ande ren Wertpapieren und
+7011;Erträge aus Ausleihungen des
+7012;Erträge aus Ausleihungen des
+7013;Erträge aus Anteilen an
+7014;Erträge aus Anteilen an Kapitalgesellschaften
+7015;Erträge aus Anteilen an Kapitalgesellschaften
+7016;Erträge aus Anteilen an
+7017;Erträge aus ande ren Wertpapieren des
+7018;Erträge aus ande ren Wertpapieren des
+7019;Erträge aus ande ren Wertpapieren und
+7020;Zins- und Dividendene rträge Zins- und Dividendene rträge
+7030;Erhaltene Ausgleichszahlungen (als
+7100;Sonstige Zinsen und ähnliche Erträge Sonstige Zinsen und ähnliche Erträge Zinsen auf Einlagen bei Kreditinstituten
+7102;Steuerfreie Aufzinsung des
+7103;Erträge aus Anteilen an Kapitalgesellschaften
+7104;Erträge aus Anteilen an Kapitalgesellschaften
+7105;Zinserträge § 233a AO steuerpflichtig Zinsen auf Einlagen bei Kreditinstituten
+7106;Zinserträge § 233a AO, steuerfrei (Anlage A
+7107;Zinserträge § 233a AO, § 4 Abs. 5b EStG,
+7109;Sonstige Zinsen und ähnliche Erträge aus
+7110;Sonstige Zinserträge
+7115;Erträge aus ande ren Wertpapieren und
+7119;Sonstige Zinserträge aus verbundenen
+7120;Zinsähnliche Erträge
+7128;Zinsertrag aus vorzeitiger Rückzahlung des
+7129;Sonstige Zinsen und ähnliche Erträge Zinsähnliche Erträge aus verbundenen
+7130;Diskonterträge Diskonterträge
+7139;Diskonterträge aus verbundenen Unternehmen
+7140;Steuerfreie Zinserträge aus der Abzinsung von
+7141;Zinserträge aus der Abzinsung von
+7142;Zinserträge aus der Abzinsung von
+7143;Zinserträge aus der Abzinsung von
+7144;Sonstige Zinsen und ähnliche Erträge
+7145;Erträge aus Vermögen sgegen ständen zur
+7190;Erträge aus Verlustübernahme Erträge aus Verlustübernahme K Erträge aus Verlustübernahme
+7192;Auf Grund einer Gewinnge meinschaft,
+7194;Erhaltene Gewinne auf Grund eines Gewinn-
+7200;Abschreibungen auf Finanzanlagen
+7201;Abschreibungen auf Finanzanlagen (nicht
+7204;Abschreibungen auf Finanzanlagen § 3 Nr. 40
+7207;Abschreibungen auf Finanzanlagen -
+7208;Aufwendungen auf Grund von Verlustanteilen
+7210;Abschreibungen auf Wertpapiere des
+7214;Abschreibungen auf Wertpapiere des
+7217;Abschreibungen auf Wertpapiere des
+7250;Abschreibungen auf Finanzanlagen auf Grund
+7255;Abschreibungen auf Finanzanlagen auf Grund
+7300;Zinsen und ähnliche Aufwendungen Zinsen und ähnliche Aufwendunge n GK Zinsen
+7302;Steuerlich nicht abzugsfähige ande re
+7303;Steuerlich abzugsfähige, ande re
+7304;Steuerlich nicht abzugsfähige, ande re
+7305;Zinsaufwendungen § 233a AO betriebliche
+7306;Zinsaufwendungen §§ 233a bis 237 AO
+7307;Zinsen aus Abzinsung des KSt-
+7308;Zinsaufwendungen § 233a AO, § 4 Abs. 5b
+7309;Zinsaufwendungen an verbundene
+7310;Zinsaufwendungen für kurzfristige
+7316;Zinsen für Gesellschafterdarlehen
+7317;Zinsen an Gesellschafter mit einer Beteiligung
+7318;Zinsen auf Kontokorrentkonten
+7319;Zinsen und ähnliche Aufwendungen Zinsaufwendungen für kurzfristige
+7320;Zinsaufwendungen für langfristige
+7323;Abschreibungen auf Disagio/Damnum zur
+7324;Abschreibungen auf Disagio/Damnum zur
+7325;Zinsaufwendungen für Gebäude , die zum
+7326;Zinsen zur Finanzierung des Anlagevermögen s
+7327;Renten und daue rnde Lasten
+7329;Zinsaufwendungen für langfristige
+7330;Zinsähnliche Aufwendunge n Übrige / nicht zuordenba re sonstige
+7339;Zinsähnliche Aufwendungen an verbundene
+7340;Diskontaufwendunge n GK Diskontaufwendunge n
+7349;Diskontaufwendungen an verbundene
+7350;Zinsen und ähnliche Aufwendungen §§ 3 Nr.
+7351;Zinsen und ähnliche Aufwendungen an
+7355;Kreditprovisionen und
+7360;Zinsanteil der Zuführungen zu
+7361;Zinsaufwendungen aus der Abzinsung von
+7362;Zinsaufwendungen aus der Abzinsung von
+7363;Zinsaufwendungen aus der Abzinsung von
+7364;Zinsen und ähnliche Aufwendungen
+7365;Aufwendungen aus Vermögen sgegen ständen
+7366;Zinsen und ähnliche Aufwendungen Steuerlich nicht abzugsfähige
+7390;Aufwendungen aus Verlustübernahme Aufwendungen aus Verlustübernahme GK Aufwendungen aus Verlustübernahmen
+7392;Auf Grund einer Gewinnge meinschaft,
+7394;Abgeführte Gewinne auf Grund eines Gewinn-
+7399;Abgeführte Gewinne an stille Gesellschafter §
+7400;Außerordentliche Erträge Außerordentliche Erträge ande re außerordentliche Erträge
+7401;Außerordentliche Erträge finanzwirksam
+7450;Außerordentliche Erträge nicht finanzwirksam
+7451;Erträge durch Verschmelzung und
+7452;Erträge durch den Verkauf von bedeu tenden
+7453;Erträge durch den Verkauf von bedeu tenden
+7454;Gewinn aus der Veräußerung oder der
+7460;Außerordentliche Erträge aus der Anwendung
+7461;Außerordentliche Erträge aus der Anwendung
+7462;Außerordentliche Erträge aus der Anwendung
+7463;Außerordentliche Erträge Außerordentliche Erträge aus der Anwendung
+7464;Außerordentliche Erträge aus der Anwendung
+7500;Außerordentliche Aufwendungen Außerordentliche Aufwendunge n ande re außerordentliche
+7501;Außerordentliche Aufwendungen finanzwirksam
+7550;Außerordentliche Aufwendungen nicht
+7551;Verluste durch Verschmelzung und
+7552;Verluste durch außergewöhnliche
+7553;Aufwendungen für Restrukturierungs- und
+7554;Verluste aus der Veräußerung oder der
+7560;Außerordentliche Aufwendungen aus der
+7561;Außerordentliche Aufwendungen aus der
+7562;Außerordentliche Aufwendungen aus der
+7563;Außerordentliche Aufwendungen aus der
+7600;Steuern vom Einkommen und Ertrag Körperschaftsteuer K Steuern vom Einkommen und vom
+7603;Körperschaftsteuer für Vorjahre
+7604;Körperschaftsteuererstattungen für Vorjahre
+7607;Solidaritätszuschlagerstattungen für Vorjahre
+7608;Solidaritätszuschlag
+7609;Solidaritätszuschlag für Vorjahre
+7610;Gewerbesteuer
+7630;Kapitalertragsteuer 25 %
+7633;Anrechenba rer Solidaritätszuschlag auf
+7639;Anzurechnende ausländische Quellensteuer
+7640;Gewerbesteuernachzahlungen Vorjahre
+7641;Gewerbesteuernachzahlungen und
+7642;Gewerbesteuererstattungen Vorjahre
+7643;Erträge aus der Auflösung von
+7644;Erträge aus der Auflösung von
+7645;Aufwendungen aus der Zuführung und
+7646;Aufwendungen aus der Zuführung zu
+7648;Erträge aus der Auflösung von
+7649;Erträge aus der Zuführung und Auflösung von
+7650;Sonstige Steuern Sonstige Betriebssteuern sonstige Steuern
+7675;Verbrauchsteuer
+7678;Ökosteuer
+7680;Grundsteuer
+7685;Kfz-Steuer
+7690;Steuernachzahlungen Vorjahre für sonstige
+7692;Steuererstattungen Vorjahre für sonstige
+7694;Erträge aus der Auflösung von Rückstellungen
+7700;Gewinn- / Verlustvortrag aus dem
+7720;Verlustvortrag nach Verwendun g
+7730;Entnahmen aus der Kapitalrücklage Entnahmen aus der Kapitalrücklage Entnahmen aus der Kapitalrücklage
+7735;Entnahmen aus der gesetzlichen
+7740;Entnahmen aus der Rücklage für
+7743;Entnahmen aus der Rücklage für
+7745;Entnahmen aus satzungsmäßigen
+7750;Entnahmen aus ande ren
+7755;Erträge aus Kapitalherabsetzung Erträge aus Kapitalherabsetzung Erträge aus der Kapitalherabsetzung
+7760;Einstellungen in die Kapitalrücklage
+7765;Einstellungen in die gesetzliche
+7770;Einstellungen in die Rücklage für
+7773;Einstellungen in die Rücklage für
+7775;Einstellungen in satzungsmäßige
+7780;Einstellungen in ande re
+7790;Ausschüttung Vorabau sschüttung Vorabau sschüttung / beschlossene
+7795;Vortrag auf neue Rechnung Vortrag auf neue Rechnung (GuV) Gewinnvortrag auf neue Rechnung
+9000;Saldenvorträge, Sachkonten
+9008;Saldenvorträge, Debitoren
+9009;Saldenvorträge, Kreditoren
+9060;Offene Posten aus 1990
+9069;Offene Posten aus 1999
+9070;Offene Posten aus 2000
+9071;Offene Posten aus 2001
+9072;Offene Posten aus 2002
+9073;Offene Posten aus 2003
+9074;Offene Posten aus 2004
+9075;Offene Posten aus 2005
+9076;Offene Posten aus 2006
+9077;Offene Posten aus 2007
+9078;Offene Posten aus 2008
+9079;Offene Posten aus 2009
+9080;Offene Posten aus 2010
+9081;Offene Posten aus 2011
+9082;Offene Posten aus 2012
+9083;Offene Posten aus 2013
+9084;Offene Posten aus 20141)
+9090;Summenvortragskonto
+9091;Offene Posten aus 1991
+9092;Offene Posten aus 1992
+9093;Offene Posten aus 1993
+9094;Offene Posten aus 1994
+9095;Offene Posten aus 1995
+9096;Offene Posten aus 1996
+9097;Offene Posten aus 1997
+9098;Offene Posten aus 1998
+9101;Verkaufstage
+9102;Anzahl der Barkunde n
+9103;Beschäftigte Personen
+9104;Unbezahlte Personen
+9105;Verkaufskräfte
+9106;Geschäftsraum qm
+9107;und Konten 9116 -9118
+9111;Umbuchung von Darlehen auf Restlaufzeit-
+9116;Anzahl Rechnunge n
+9117;Anzahl Kreditkunden monatlich
+9118;Anzahl Kreditkunden aufgelaufen
+9120;Erweiterungsinvestitionen
+9130;Mitarbeiter7)
+9131;effektive Arbeitsstunde n7)
+9135;Auftragseingang im Geschäftsjahr
+9140;Auftragsbestand
+9190;Gegen konto für statistische Mengene inheiten
+9199;Gegen konto zu Konten 9120 , 9135 -9140
+9200;Beschäftigte Personen
+9209;Gegen konto zu 9200
+9210;Produktive Löhn e
+9219;Gegen konto zu 9210
+9220;Gezeichnetes Kapital in DM (Art. 42 Abs. 3
+9221;Gezeichnetes Kapital in Euro (Art. 42 Abs. 3
+9229;Gegen konto zu Konten 9220 -9221
+9230;Baukostenzuschüsse
+9232;Investitionszulagen
+9234;Investitionszuschüsse
+9239;Gegen konto zu Konten 9230 -9238
+9240;Investitionsverbindlichkeiten bei den
+9241;Investitionsverbindlichkeiten aus
+9242;Investitionsverbindlichkeiten aus Käufen von
+9243;Investitionsverbindlichkeiten aus Käufen von
+9244;Gegen konto zu Konten 9240 -9243
+9245;Forderungen aus Sachanlageverkäufen bei
+9246;Forderungen aus Verkäufen immaterieller
+9247;Forderungen aus Verkäufen von
+9249;Gegen konto zu Konten 9245 -9247
+9250;Eigenkapitalersetzende Gesellschafterdarlehen11)
+9255;Ungesicherte Gesellschafterdarlehen -
+9259;Gegen konto zu 9250 und 925511)
+9260;Kurzfristige Rückstellunge n
+9262;Mittelfristige Rückstellunge n
+9264;Lang fristige Rückstellungen , außer Pensionen
+9269;Gegen konto zu Konten 9260 -9268
+9270;Gegen konto zu Konten 9271 -9279 (Soll-
+9271;Verbindlichkeiten aus der Begebung und
+9272;Verbindlichkeiten aus der Begebung und
+9273;Verbindlichkeiten aus Bürgschaften, Wechsel-
+9274;Verbindlichkeiten aus Bürgschaften, Wechsel-
+9275;Verbindlichkeiten aus
+9276;Verbindlichkeiten aus
+9277;Haftung aus der Bestellung von Sicherheiten
+9278;Haftung aus der Bestellung von Sicherheiten
+9279;Verpflichtungen aus Treuhand vermögen
+9280;Gegen konto zu 9281 -9286
+9281;Verpflichtungen aus Miet- und
+9282;Verpflichtungen aus Miet- und
+9283;Andere Verpflichtungen gemäß § 285 Nr. 3a
+9284;Andere Verpflichtungen gemäß § 285 Nr. 3a
+9285;Statistisches Konto für den oberen Grenzwert,
+9286;Statistisches Konto für den unteren Grenzwert,
+9290;Statistisches Konto steuerfreie Auslagen
+9291;Gegen konto zu 9290
+9292;Verbindlichkeiten aus Lieferungen und
+9293;Sonstige Verbindlichkeiten Gegen konto zu 9292 übrige sonstige Verbindlichkeiten
+9295;Einlagen stiller Gesellschafter Einlagen stiller Gesellschafter GK Einlagen stiller Gesellschafter
+9297;Steuerrechtlicher Ausgleichsposten Steuerrechtlicher Ausgleichsposten SB steuerlicher Ausgleichsposten
+9390;Konto für Branchenlösungen (Werte 1)24)
+9391;Konto für Branchenlösungen (Werte 2)
+9392;Konto für Branchenlösungen (Werte 3)
+9393;Konto für Branchenlösungen (Werte 4)
+9394;Gegen konto für Branchenlösungen (Werte)
+9395;Konto für Branchenlösungen (Menge 1)
+9396;Konto für Branchenlösungen (Menge 2)
+9397;Konto für Branchenlösungen (Menge 3)
+9398;Konto für Branchenlösungen (Menge 4)
+9399;Gegen konto für Branchenlösungen (Menge )
+9890;Statistisches Konto für den Gewinnzuschlag
+9891;Statistisches Konto für den Gewinnzuschlag
+9960;Forderungen aus Lieferungen und
+9961;Sonstige Verbindlichkeiten Bewertungskorrektur zu sonstigen
+9962;Kassenbe stand, Bunde sbankguthaben ,
+9963;Verbindlichkeiten gegenübe r
+9964;Verbindlichkeiten aus Lieferungen und
+9965;Sonstige Vermögen sgegen stände Bewertungskorrektur zu sonstigen
+9970;Investitionsabzugsbetrag § 7g Abs. 1 EStG,
+9971;Investitionsabzugsbetrag § 7g Abs. 1 EStG,
+9972;Hinzurechnung Investitionsabzugsbetrag § 7g
+9973;Hinzurechnung Investitionsabzugsbetrag § 7g
+9974;Rückgäng igmachung § 7g Abs. 3, 4 EStG und
+9975;Rückgäng igmachung § 7g Abs. 3, 4 EStG und
+9976;Nicht abzugsfähige Zinsaufwendungen gemäß
+9977;Nicht abzugsfähige Zinsaufwendungen gemäß
+9978;Abziehba re Zinsaufwendungen aus Vorjahren
+9979;Abziehba re Zinsaufwendungen aus Vorjahren
+9984;Gewinnkorrektur nach § 60 Abs 2 EStDV -
+9985;Gegen konto zu 9984
+9986;Ergebn isverteilung auf Fremdkapital
+9987;Bilanzberichtigung
+9989;Gegen konto zu 9986 - 9988
