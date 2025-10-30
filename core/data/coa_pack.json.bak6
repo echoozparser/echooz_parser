@@ -1,0 +1,1396 @@
+{
+  "version": "2025-10-30.4",
+  "mappings": {
+    "SKR03": {
+      "name": "SKR03",
+      "version": "1.0",
+      "groups": {
+        "ASSETS_NONCURRENT": {
+          "label": "Anlagevermögen",
+          "normal_side": "debit"
+        },
+        "ASSETS_CURRENT": {
+          "label": "Umlaufvermögen",
+          "normal_side": "debit"
+        },
+        "EQUITY": {
+          "label": "Eigenkapital",
+          "normal_side": "credit"
+        },
+        "LIABILITIES_CURRENT": {
+          "label": "Kurzfr. Verbindlichkeiten",
+          "normal_side": "credit"
+        },
+        "LIABILITIES_NONCURRENT": {
+          "label": "Langfr. Verbindlichkeiten",
+          "normal_side": "credit"
+        },
+        "P&L_REVENUE": {
+          "label": "Umsatzerlöse",
+          "normal_side": "credit"
+        },
+        "P&L_EXPENSE": {
+          "label": "Sonstige Aufwendungen",
+          "normal_side": "debit"
+        },
+        "P&L_PERSONNEL": {
+          "label": "Personalaufwand",
+          "normal_side": "debit"
+        },
+        "P&L_OTHER_INCOME": {
+          "label": "Sonstige Erträge",
+          "normal_side": "credit"
+        },
+        "TECHNICAL": {
+          "label": "Technisch/Ignore",
+          "normal_side": "debit"
+        }
+      },
+      "rules": [
+        {
+          "type": "regex",
+          "pattern": "^=\\s.*",
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "regex",
+          "pattern": "^(Saldo|Sachkonten:|Sachkonten-Summe:|Kontokorrent-Konten:)$",
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "range",
+          "start": 9000,
+          "end": 9099,
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "range",
+          "start": 9300,
+          "end": 9399,
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "regex",
+          "pattern": "^10000$",
+          "target": "TECHNICAL",
+          "priority": 480
+        },
+        {
+          "type": "regex",
+          "pattern": "^7\\d{4}$",
+          "target": "TECHNICAL",
+          "priority": 480
+        },
+        {
+          "type": "regex",
+          "pattern": "^2150$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2308$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2709$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2204$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2660$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2749$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "range",
+          "start": 0,
+          "end": 999,
+          "target": "ASSETS_NONCURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 1000,
+          "end": 1599,
+          "target": "ASSETS_CURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 1600,
+          "end": 1799,
+          "target": "LIABILITIES_CURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 1800,
+          "end": 1999,
+          "target": "ASSETS_CURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 3000,
+          "end": 3999,
+          "target": "P&L_EXPENSE",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 4100,
+          "end": 4199,
+          "target": "P&L_PERSONNEL",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 4200,
+          "end": 4999,
+          "target": "P&L_EXPENSE",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 5000,
+          "end": 6999,
+          "target": "P&L_EXPENSE",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 8000,
+          "end": 8999,
+          "target": "P&L_REVENUE",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 10000,
+          "end": 19999,
+          "target": "ASSETS_NONCURRENT",
+          "priority": 120
+        },
+        {
+          "type": "range",
+          "start": 20000,
+          "end": 29999,
+          "target": "ASSETS_CURRENT",
+          "priority": 120
+        },
+        {
+          "type": "range",
+          "start": 30000,
+          "end": 39999,
+          "target": "ASSETS_NONCURRENT",
+          "priority": 120
+        },
+        {
+          "type": "range",
+          "start": 110000,
+          "end": 119999,
+          "target": "ASSETS_CURRENT",
+          "priority": 120
+        },
+        {
+          "type": "range",
+          "start": 120000,
+          "end": 129999,
+          "target": "ASSETS_CURRENT",
+          "priority": 120
+        },
+        {
+          "type": "regex",
+          "pattern": "^13001$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 350
+        },
+        {
+          "type": "regex",
+          "pattern": "^13500$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 350
+        },
+        {
+          "type": "regex",
+          "pattern": "^39800$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 350
+        },
+        {
+          "type": "regex",
+          "pattern": "^6300[0-9]$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 350
+        },
+        {
+          "type": "regex",
+          "pattern": "^65000$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 350
+        },
+        {
+          "type": "regex",
+          "pattern": "^82000$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 350
+        },
+        {
+          "type": "regex",
+          "pattern": "^90000$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 350
+        }
+      ]
+    },
+    "SKR04": {
+      "name": "SKR04",
+      "version": "2025-10-30.7",
+      "groups": {
+        "ASSETS_NONCURRENT": {
+          "label": "Anlagevermögen",
+          "normal_side": "debit"
+        },
+        "ASSETS_CURRENT": {
+          "label": "Umlaufvermögen",
+          "normal_side": "debit"
+        },
+        "EQUITY": {
+          "label": "Eigenkapital",
+          "normal_side": "credit"
+        },
+        "LIABILITIES_CURRENT": {
+          "label": "Kurzfr. Verbindlichkeiten",
+          "normal_side": "credit"
+        },
+        "LIABILITIES_NONCURRENT": {
+          "label": "Langfr. Verbindlichkeiten",
+          "normal_side": "credit"
+        },
+        "P&L_REVENUE": {
+          "label": "Umsatzerlöse",
+          "normal_side": "credit"
+        },
+        "P&L_EXPENSE": {
+          "label": "Sonstige Aufwendungen",
+          "normal_side": "debit"
+        },
+        "P&L_PERSONNEL": {
+          "label": "Personalaufwand",
+          "normal_side": "debit"
+        },
+        "P&L_OTHER_INCOME": {
+          "label": "Sonstige Erträge",
+          "normal_side": "credit"
+        },
+        "TECHNICAL": {
+          "label": "Technisch/Ignore",
+          "normal_side": "debit"
+        },
+        "PROVISIONS": {
+          "label": "Rückstellungen",
+          "normal_side": "credit"
+        }
+      },
+      "rules": [
+        {
+          "type": "regex",
+          "pattern": "^=\\s.*",
+          "target": "TECHNICAL",
+          "priority": 300
+        },
+        {
+          "type": "regex",
+          "pattern": "^(Saldo|Sachkonten:|Sachkonten-Summe:|Kontokorrent-Konten:)$",
+          "target": "TECHNICAL",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 9000,
+          "end": 9099,
+          "target": "TECHNICAL",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 9300,
+          "end": 9999,
+          "target": "TECHNICAL",
+          "priority": 300
+        },
+        {
+          "type": "label_regex",
+          "pattern": "edv[-\\s]?software|\\bsoftware\\b|lizenz(en)?(\\s+an\\s+gewerblichen\\s+schutzrechten)?|schutzrecht|immateriell|sachanlagen|it[-\\s]?software",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "geschäfts[-\\s]*oder[-\\s]*firmenwert|firmenwert|goodwill",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "technische\\s+anlagen|maschinen|anlage(n)?",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\b(pkw|lkw|kfz|fahrzeug|fuhrpark|transporter|transportmittel)\\b",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "auto(zubehör|[-\\s]?zubeh(ö|oe)r)",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "betriebs[-\\s]*u\\.?\\s*gesch(ä|a)ftsausstattung|betriebsausstattung|betriebsaustattung|\\bbga\\b|büroeinrichtung|bueroeinrichtung|werkzeug(e)?",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(nb\\s+\\w+\\s+ausstattung|ausstattung(\\s+\\w+)?)",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "einbauten\\s+in\\s+fremde\\s+grundst(ü|u)cke",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "geringw.*wirtschaftsg(ü|u)ter|\\bgwg\\b",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "telefonanlage|edv\\s*qbig",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "anteile\\s+an\\s+verb\\.?\\s*(un|unternehmen|u\\.?n\\.?)|kap\\.?\\s*ges\\.?|beteiligungen",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "r(ü|u)ckdeckungsanspr(ü|u)ch.*lebensvers|rueckdeckungsanspr(ue|ü)ch",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "aktive\\s+latente\\s+steuern|latente\\s+steuern\\s+aktiva",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\bkasse\\b|kassenbestand|bar(best(ä|a)nde?)?",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "bank|guthaben|kontokorrent|paypal|kreditkarte|sparkasse|commerzbank|postbank|ing\\b|dkb\\b|volksbank|raiffeisenbank",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "forderungen(\\s+aus\\s+lieferungen\\s+und\\s+leistungen|\\s*a\\.?\\s*l\\.?\\s*u\\.?\\s*l\\.?|\\s*a\\.l\\.l\\.|\\s*aus\\s*l\\+l)?|debitor(en)?|kunden",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "forderungen\\s+gegen(ü|u)ber\\s+verbund(en|e)\\s*(unternehmen|un\\.?|gesellschaft(en)?)",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s+forderungen|steuerforderungen|ertragssteuer(forderungen)?|sicherheitsleistungen",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "vorsteuer|\\bvst(\\s*(19|7))?%?",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "durchlaufende\\s+posten",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "vorr(ä|a)te|roh-?,?\\s*hilfs-\\s*und\\s*betriebsstoffe|waren(bestand)?|unfertige|fertige\\s*erzeugnisse",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "aktive\\s+rechnungsabgrenzung|\\barap\\b|transitorisch.*aktiva",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "geleistete\\s+anzahlungen|vorauszahlungen",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "gezeichnetes\\s*kapital|stammkapital|grundkapital",
+          "target": "EQUITY"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "kapitalr(ü|u)cklage|kapitalruecklage",
+          "target": "EQUITY"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "gewinnvortrag(\\s+vor\\s+verwendung)?|verlustvortrag|jahres(über|ue)schuss|jahresfehlbetrag|bilanzgewinn|bilanzverlust",
+          "target": "EQUITY"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(^|\\b)r\\s*st(\\.|\\b)|abschluss.*pr(ü|u)fungskosten|r(ü|u)ckstellung(en)?",
+          "target": "PROVISIONS"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "pensions(\\s*[-–]\\s*und\\s*ähnliche)?\\s*r(ü|u)ckstellungen|pensionsr(ü|u)ckstellungen",
+          "target": "PROVISIONS"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "urlaubsr(ü|u)ckstellungen",
+          "target": "PROVISIONS"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "r(ü|u)ckstellung(en)?\\s*(überstunden|aufbewahrungspf|prozesse|steuern|gewinnabh(ä|a)ngig|abschluss)",
+          "target": "PROVISIONS"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s+r(ü|u)ckstellungen",
+          "target": "PROVISIONS"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "passive\\s+latente\\s+steuern|latente\\s+steuern\\s+passiva",
+          "target": "LIABILITIES_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindlichk\\.?en?\\s+gegen(ü|u)ber\\s+verbunden(en|e)\\s*(unternehmen|un\\.?|gesellschaft(en)?)",
+          "target": "LIABILITIES_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindlichk\\.?en?\\s+gegen(ü|u)ber\\s+gesellschaftern|gesellschafterdarlehen",
+          "target": "LIABILITIES_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "darlehen|bankdarlehen|kredit(e)?|hypothek(en)?|leasingverbindlichkeit(en)?|kreditinstitut(e)?",
+          "target": "LIABILITIES_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindlichk\\.?en?(\\s+aus\\s+lieferungen\\s+und\\s+leistungen|\\s*a\\.?\\s*l\\.?\\s*u\\.?\\s*l\\.?|\\s*aus\\s*l\\+l)?|kreditor(en)?|lieferanten",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "umsatzsteuer|\\bust(\\s*(19|7))?%?|lohnsteuer|kirchensteuer|soli|steuerschulden|steuerverbindlichk|ust[-\\s]?voranmeldung|ust[-\\s]?zahllast",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sozial(vers|abgaben)|krankenkasse|rentenkasse|berufsgenossenschaft|sv[-\\s]?beitr(ä|a)ge?",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "passive\\s+rechnungsabgrenzung|\\bprap\\b|transitorisch.*passiva",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "erhaltene\\s+anzahlungen|vorauszahlungen",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s+verbindlichk\\.?en?",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "umsatzerl(ö|oe)se|erl(ö|oe)se|honorar(e)?|provisionserl(ö|oe)se|ig[-\\s]*lieferungen|steuerfrei(e)?\\s*erl(ö|oe)se",
+          "target": "P&L_REVENUE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "wareneinsatz|material(aufwand|einsatz)|bezogene\\s*leistungen",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s+ertr(ä|a)ge|mietertr(ä|a)ge|zinsertr(ä|a)ge|kursgewinne|skonto(ertr(ä|a)ge|erl(ö|oe)se)",
+          "target": "P&L_OTHER_INCOME"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "abschreibungen|\\bafa\\b",
+          "target": "P&L_DEPRECIATION"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "zinsen|zinsaufwand|bankgeb(ü|u)hren|kontof(ü|u)hrungsgeb(ü|u)hren",
+          "target": "P&L_INTEREST"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "l(ö|oe)hne|geh(ä|a)lter|sozialabgaben|arbeitgeberanteil|personalaufwand",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "miete|pacht|werbung|marketing|telefon|handy|internet|domain|webhosting|porto|bewirtung|reisekosten|kfz|reparatur|versicherung|beratung|rechts[-\\s]*und\\s*beratungskosten|mitgliedsbeitrag|geb(ü|u)hren|fortbildung|seminar|schulung|strom|gas|wasser|heizung|energie|leasing|cloud|saas|software[-\\s]?abo|m365|office\\s*365|fracht|versand|lieferkosten|grundsteuer|kfz[-\\s]?steuer",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "regex",
+          "pattern": "^320$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^490$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^800$",
+          "target": "EQUITY",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^(956|963|970|977)$",
+          "target": "LIABILITIES_CURRENT",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^980$",
+          "target": "ASSETS_CURRENT",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^990$",
+          "target": "LIABILITIES_CURRENT",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^3106$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^3109$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^8337$",
+          "target": "P&L_REVENUE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^8338$",
+          "target": "P&L_REVENUE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^8400$",
+          "target": "P&L_REVENUE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^8519$",
+          "target": "P&L_REVENUE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^8641$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^10000$",
+          "target": "ASSETS_CURRENT",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^(70001|70030|70040|70060)$",
+          "target": "LIABILITIES_CURRENT",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^70250$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^70410$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^70470$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^70500$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^(1|2|4|10)$",
+          "target": "LIABILITIES_CURRENT",
+          "priority": 470
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindlichk\\.?\\s*gegen(?:ü|u)ber\\s*verbund",
+          "target": "LIABILITIES_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "r(?:ü|u)ckstell\\.?.*aufbewahrungspf",
+          "target": "PROVISIONS"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(?:pauschal|einzel)wertberichtig.*forder",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\b(ksk|spk|sparkasse|tagesgeld|aval(?:konto)?)\\b",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "geldtransit|verr(?:\\.|echnungskonto)|ze/za",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "forder.*(gesellschafter|ges\\.)",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s+verm(?:ö|o)gensgegenst(?:ä|a)nde",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "kaution(en)?",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "forder.*(personal|lohn|gehalt)",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "vorsch(?:u|ü)ss?\\s*beleg",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "^verrechnung(\\s|$)|verrechnungskonto",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindl\\.?\\s*aus\\s*lieferungen\\s*(?:und|u\\.)\\s*leistungen|verb\\.?\\s*lu?l\\b",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "angeforderte\\s+anzahl|angeford\\.\\s*az",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "erhalt.*anzahl",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(betriebs)?steuern?.*abgaben|verb\\.\\s*.*steuern",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "einbehaltung\\s+arbeitnehmer",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "k(?:ö|o)rperschaftsteuer.*erstattung",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\brevolut\\b|\\bbunq\\b",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\baufwendung.*w(?:ä|a)hrungsumrechnung",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\bertr(ä|a)g.*w(?:ä|a)hrungsumrechnung",
+          "target": "P&L_OTHER_INCOME"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "nicht\\s*abziehb",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\bspenden?\\b",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "aufwendungsausgleichs",
+          "target": "P&L_OTHER_INCOME"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(gesetzl\\.|freiw\\.)\\s*soziale\\s*aufw",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "pausch\\.\\s*st\\.\\s*f\\.\\s*arbeitnehmer",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "reinigung|instandhaltung.*raum|beitr(?:ä|a)ge|taxi|fremdfahrzeugkosten|werbekosten|dekoration|geschenke|aufmerksamkeiten|reise(kosten)?|übern\\.?aufw|rnk",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "regex",
+          "pattern": "^2709$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2308$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2204$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindlichk\\.\\s*gegen(?:ü|u)ber\\s*verbund(?:enen|ene)?\\s*(?:un|unternehmen|gesellschaft)",
+          "target": "LIABILITIES_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "r(?:ü|u)ckstell[^a-z]*.*aufbewahrungspf",
+          "target": "PROVISIONS"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(?:pauschal|einzel)wertberichtig.*forder(?:g|ung|ungen)?",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\bksk\\b|\\bspk\\b|sparkasse|tagesgeld|avalkonto",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "geldtransit|verr\\.?\\s*kto|ze/za|\\bverrechnungskonto\\b|^verrechnung\\s+\\w+",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\bzinskonto\\b|\\bzins\\s*konto\\b",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "ford\\.\\s*gg\\.\\s*(?:gmbh-?)?gesellschafter",
+          "target": "ASSETS_NONCURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "forder(?:ung|g)\\.?\\s*gg\\.\\s*(personal|lohn|gehalt)",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(verbindl\\.?\\s*aus\\s*lieferungen\\s*(?:und|u\\.)\\s*leistungen|verb\\.?\\s*l[uü]l\\b)",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "erhalt(?:ene|\\.?)\\s*verst\\.?\\s*anz|erhaltene\\s*anzahl",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindl\\.\\s*(betriebs)?steuern?.*abgaben|verbindl\\..*steuern",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "k(?:ö|o)rperschaftsteuer.*erstatt",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "\\beav\\b",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "fremdleist|subunternehmer|§\\s*13b|eg-?land\\s+un|projektleitung|ibn",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "leiharbeit|an[üu]\\b",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "bezugsnebenkosten|z(ö|oe)lle|einfuhrabgaben",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "tantiemen.*arbeitnehmer",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "gesetzliche\\s*sozialaufw|sozialabgaben|minijobber",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "freiwillige\\s*soziale\\s*aufw",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sachzuwend.*arbeitnehmer",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "pauschale\\s*steuer.*(arbeitnehmer|minijob|zusch(ü|u)sse)",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "aufwend.*urlaubsr(ü|u)ckst",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "altersversorgung",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verm(ö|o)genswirksame\\s*leistungen",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "fahrtkosten(erstat|erstatt).*arbeitsst(ä|a)tte|fahrtkost",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s*abgaben",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "fahrzeugkosten",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "streuartikel|repr(ä|a)sentationskosten",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "gew(ä|a)hrleist",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "schadensersatz",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s*betriebliche\\s*aufwendungen",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "geldtransit|verr\\.?\\s*kto|verrechnungskonto|verrechnung\\s",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "tagesgeld|avalkonto|aval",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "kaution",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige\\s*verm(ö|o)gensgegenst(ä|a)nde",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "ford\\.\\s*gg\\.\\s*gmbh-?gesellschafter|gesellschafter",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verbindl\\.\\s*(betriebs)?steuern?.*abgaben|steuern.*abgaben",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "einbehaltung\\s*arbeitnehmer",
+          "target": "LIABILITIES_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "angeforderte\\s*anzahl|angeford\\.\\s*az",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "gewerbe(st)?euer.*(nachz|erstatt)",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "zusch(ü|u)sse\\s*agent(ur|uren)\\s*f(ü|u)r\\s*arbeit",
+          "target": "P&L_OTHER_INCOME"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "bürobedarf",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(miet|leas).*gerät.*baustell",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "abraum|abfall|entsorgung",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "betriebsbedarf",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "sonstige.*betriebl.*aufw",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "repr(ä|a)sentationskosten|streuartikel",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "buchf(ü|u)hrungskosten|buchhaltungskosten|steuerberater",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(neben)?kosten\\s+des\\s+geldverkehrs|bankgeb(ü|u)hren|kontof(ü|u)hrungsgeb(ü|u)hren",
+          "target": "P&L_INTEREST"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "absch(r|rei)b\\..*sachanl|afa",
+          "target": "P&L_DEPRECIATION"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "verrechnete\\s+.*sachbez(ü|u)ge|jobrad",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "pausch.*(lst|lohnsteuer|lost)",
+          "target": "P&L_PERSONNEL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(überl|ueberl)\\.?.*recht",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(gewerbe(st)?euer|gewst).*(nachz|erstatt)",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "in\\s+ausf(ü|u)hrung\\s+befindl\\.\\s*bauauftr(ä|a)ge|bauauftr(ä|a)ge\\s+in\\s+ausf(ü|u)hrung",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "tagesgeld|aval(konto)?",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "vorsch(u|ü)ss?",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "regex",
+          "pattern": "^9000000$",
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "regex",
+          "pattern": "^9095000$",
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "label_regex",
+          "pattern": "saldenliste|sachkonto.*kontenklassen.*monatsaldo",
+          "target": "TECHNICAL"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "vorsch(u|ü)(ss|ß)",
+          "target": "ASSETS_CURRENT"
+        },
+        {
+          "type": "regex",
+          "pattern": "saldenliste|kontenklassen|monatssaldo|R\\d{6,}",
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "label_regex",
+          "pattern": "instandhaltung.*r(ä|ae|a)um",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "(miet.*leas|leasing).*(wg|anlage|masch)",
+          "target": "P&L_EXPENSE"
+        },
+        {
+          "type": "label_regex",
+          "pattern": "absch(r|rei)b.*sachanl",
+          "target": "P&L_DEPRECIATION"
+        }
+      ]
+    },
+    "NETTI": {
+      "name": "NETTI",
+      "version": "1.0",
+      "groups": {
+        "ASSETS_NONCURRENT": {
+          "label": "Anlagevermögen",
+          "normal_side": "debit"
+        },
+        "ASSETS_CURRENT": {
+          "label": "Umlaufvermögen",
+          "normal_side": "debit"
+        },
+        "EQUITY": {
+          "label": "Eigenkapital",
+          "normal_side": "credit"
+        },
+        "LIABILITIES_CURRENT": {
+          "label": "Kurzfr. Verbindlichkeiten",
+          "normal_side": "credit"
+        },
+        "LIABILITIES_NONCURRENT": {
+          "label": "Langfr. Verbindlichkeiten",
+          "normal_side": "credit"
+        },
+        "P&L_REVENUE": {
+          "label": "Umsatzerlöse",
+          "normal_side": "credit"
+        },
+        "P&L_EXPENSE": {
+          "label": "Sonstige Aufwendungen",
+          "normal_side": "debit"
+        },
+        "P&L_PERSONNEL": {
+          "label": "Personalaufwand",
+          "normal_side": "debit"
+        },
+        "P&L_OTHER_INCOME": {
+          "label": "Sonstige Erträge",
+          "normal_side": "credit"
+        },
+        "TECHNICAL": {
+          "label": "Technisch/Ignore",
+          "normal_side": "debit"
+        }
+      },
+      "rules": [
+        {
+          "type": "regex",
+          "pattern": "^=\\s.*",
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "regex",
+          "pattern": "^(Saldo|Sachkonten:|Sachkonten-Summe:|Kontokorrent-Konten:)$",
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "range",
+          "start": 9000,
+          "end": 9099,
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "range",
+          "start": 9300,
+          "end": 9399,
+          "target": "TECHNICAL",
+          "priority": 500
+        },
+        {
+          "type": "regex",
+          "pattern": "^10000$",
+          "target": "TECHNICAL",
+          "priority": 480
+        },
+        {
+          "type": "regex",
+          "pattern": "^7\\d{4}$",
+          "target": "TECHNICAL",
+          "priority": 480
+        },
+        {
+          "type": "regex",
+          "pattern": "^(320|490)$",
+          "target": "ASSETS_NONCURRENT",
+          "priority": 400
+        },
+        {
+          "type": "regex",
+          "pattern": "^800$",
+          "target": "EQUITY",
+          "priority": 400
+        },
+        {
+          "type": "regex",
+          "pattern": "^(956|963|970|977)$",
+          "target": "LIABILITIES_NONCURRENT",
+          "priority": 400
+        },
+        {
+          "type": "regex",
+          "pattern": "^980$",
+          "target": "ASSETS_CURRENT",
+          "priority": 400
+        },
+        {
+          "type": "regex",
+          "pattern": "^990$",
+          "target": "LIABILITIES_CURRENT",
+          "priority": 400
+        },
+        {
+          "type": "regex",
+          "pattern": "^2150$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2308$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2709$",
+          "target": "P&L_EXPENSE",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2204$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2660$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "regex",
+          "pattern": "^2749$",
+          "target": "P&L_OTHER_INCOME",
+          "priority": 460
+        },
+        {
+          "type": "range",
+          "start": 0,
+          "end": 999,
+          "target": "ASSETS_NONCURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 1000,
+          "end": 1599,
+          "target": "ASSETS_CURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 1600,
+          "end": 1799,
+          "target": "LIABILITIES_CURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 1800,
+          "end": 1999,
+          "target": "ASSETS_CURRENT",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 3000,
+          "end": 3999,
+          "target": "P&L_EXPENSE",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 4100,
+          "end": 4199,
+          "target": "P&L_PERSONNEL",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 4200,
+          "end": 4999,
+          "target": "P&L_EXPENSE",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 5000,
+          "end": 6999,
+          "target": "P&L_EXPENSE",
+          "priority": 300
+        },
+        {
+          "type": "range",
+          "start": 8000,
+          "end": 8999,
+          "target": "P&L_REVENUE",
+          "priority": 300
+        }
+      ]
+    }
+  }
+}
