@@ -7,3 +7,10 @@ tmp/
 *.xlsx
 *.json.bak
 core/data/coa_pack.json.bak*
+core/.env
+echooz_results.sqlite
+uploads/
+logs/
+results/
+out*.json
+*.sqlite
