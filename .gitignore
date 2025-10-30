@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+venv/
+.venv/
+tmp/
+*.xlsx
+*.json.bak
+core/data/coa_pack.json.bak*
