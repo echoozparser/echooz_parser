@@ -1,27 +1,16 @@
-# echooz_parser
-
-Parser & Aggregator für SuSa/BWA → HGB-Struktur inkl. Auto-Mapping (SKR03/SKR04/NETTI), Safe-Mode-Balance, Coverage-Metriken und Liste der ungemappten Konten.
-
-## Quickstart (lokal)
-
-```bash
+# 0) Umgebung
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 
-# Server starten (eine der beiden Varianten):
+# 1) Server starten (eine Variante)
 uvicorn main:app --reload --port 8000
 # oder:
 # python3 main.py
 
-# 1) Server läuft? (einer von beiden)
-# uvicorn main:app --reload --port 8000
-# oder:
-# python3 main.py
-
-# 2) Pfad zur Datei anpassen (Rechtsklick im Finder → Copy as Pathname)
+# 2) Pfad zur Datei anpassen (Finder → Rechtsklick → "Copy as Pathname")
 export FILE_PATH="/ABSOLUTER/PFAD/zu/test_1.xlsx"
 
-# 3) Upload: liefert eine FILE_ID (sha256 / stored_as)
+# 3) Upload → FILE_ID erhalten
 export FILE_ID=$(
   curl -s -X POST "http://127.0.0.1:8000/upload" -F "file=@${FILE_PATH}" \
   | python3 -c 'import sys,json; d=json.load(sys.stdin); o=d[0] if isinstance(d,list) else d; print(o.get("file_sha256") or o.get("id") or o.get("stored_as") or "")'
@@ -47,5 +36,3 @@ print({
   "result": round(p["result"],2)
 })
 PY
-
-
