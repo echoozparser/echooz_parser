@@ -36,3 +36,20 @@ print({
   "result": round(p["result"],2)
 })
 PY
+# Ergebnis der letzten Aggregation einmal in eine Datei schreiben:
+curl -s -X POST "http://127.0.0.1:8000/rebuild/${FILE_ID}" \
+  -H "Content-Type: application/json" \
+  --data-binary '{"prefer_coa":"skr04","period_start":"2024-01-01","period_end":"2024-12-31","aggregate": true}' \
+  > "/tmp/rebuild_${FILE_ID}_skr04.json"
+
+# Top-20 Unmapped ausgeben:
+python3 - <<'PY'
+import os, json, itertools as it
+fid=os.environ["FILE_ID"]
+r=json.load(open(f"/tmp/rebuild_{fid}_skr04.json"))[0]
+L=r["aggregation"]["meta"]["unmapped_accounts_list"]
+for x in it.islice(L, 0, 20):
+    print(f"{x.get('account','?')}\t{x.get('label','')}\t{x.get('saldo',0)}")
+print(f"\nUNMAPPED_LEFT = {len(L)}")
+PY
+
