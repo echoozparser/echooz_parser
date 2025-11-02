@@ -42,17 +42,22 @@ from core.plausibility import analyze_data as plausi_analyze
 # Summenzeilen + Saldo/Marker-Fallback
 from core.parser_utils import drop_total_rows, check_balance_via_saldo_marker
 
-# NEU: Fingerprint
-from core.fingerprint import compute_pipeline_fingerprint, file_sha_or_none
+# Fingerprint
+from core.fingerprint import compute_pipeline_fingerprint
 
-# NEU: DB-Persistenz (Snapshots & Pivot)
+# DB-Persistenz (Snapshots & Pivot)
 from core.persistence import init_db, write_snapshots, read_snapshots, read_pivot
+
+# Snapshot-API (zusätzliche Routen)
+from core.snapshot_api import router as snapshot_router
 
 # =========================================================
 # ECHOOZ PARSER v8.9 – Persistenz, Idempotenz, Aggregation (auto) + Fingerprint + Force-Refresh
 # =========================================================
 
 app = FastAPI(title="Echooz Parser", version="8.9")
+app.include_router(snapshot_router)
+
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 
 BASE_DIR = Path(__file__).parent
@@ -69,7 +74,7 @@ LOG_DIR.mkdir(parents=True, exist_ok=True)
 RESULTS_DIR.mkdir(parents=True, exist_ok=True)
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-# NEU: DB initialisieren (legt Tabellen an; idempotent)
+# DB initialisieren (idempotent)
 init_db()
 
 ALLOWED_SUFFIXES = {".xlsx", ".xls", ".xlsm", ".ods", ".csv"}
@@ -80,10 +85,11 @@ PREVIEW_ROWS = int(os.getenv("ECHOoz_PREVIEW_ROWS", "10"))
 SUSA_TOLERANCE = float(os.getenv("ECHOoz_SUSA_TOLERANCE", "0.01"))
 PERSIST_RESULTS = bool(int(os.getenv("ECHOoz_PERSIST_RESULTS", "1")))  # 1=an, 0=aus
 
-# Base44 (optional aktiv)
+# Base44 (optional)
 BASE44_URL = os.getenv("BASE44_URL", "https://api.base44.io/entities/ParsedFinancialFile")
 BASE44_TOKEN = os.getenv("BASE44_TOKEN", "").strip()
 POST_TO_BASE44 = bool(int(os.getenv("ECHOoz_POST_TO_BASE44", "1")))  # 1=an, 0=aus
+
 
 # ---------------------------------------------------------
 # Pydantic-Modelle
@@ -94,6 +100,7 @@ class LearningInfo(BaseModel):
     source: Optional[str] = None
     matched_pattern_id: Optional[str] = None
 
+
 class SusaBalance(BaseModel):
     debit_total: float
     credit_total: float
@@ -101,6 +108,7 @@ class SusaBalance(BaseModel):
     tolerance: float
     balanced: bool
     columns_used: List[str]
+
 
 class SheetResult(BaseModel):
     filename: str
@@ -122,18 +130,23 @@ class SheetResult(BaseModel):
     mapping: Optional[Dict[str, Any]] = None
     aggregation: Optional[Dict[str, Any]] = None
 
+
 class PlausiRequest(BaseModel):
     data: Dict[str, Any]
 
+
 class PlausiResponse(BaseModel):
     findings: List[Dict[str, Any]]
+
 
 class FeedbackRequest(BaseModel):
     stored_as: str
     sheet: str
     correct_label: str  # "SuSa" | "BWA" | "Bilanz" | "Journal" | "Unbekannt"
 
+
 UploadResponse = List[SheetResult]
+
 
 # ---------------------------------------------------------
 # Hilfsfunktionen
@@ -146,6 +159,7 @@ def sanitize_for_json(df: pd.DataFrame) -> pd.DataFrame:
     safe = safe.replace([pd.NA, float("inf"), float("-inf")], pd.NA).where(pd.notna(safe), None)
     return safe
 
+
 def _save_upload(file: UploadFile, content_length: Optional[int]) -> Path:
     suffix = Path(file.filename).suffix.lower()
     if suffix not in ALLOWED_SUFFIXES:
@@ -154,14 +168,14 @@ def _save_upload(file: UploadFile, content_length: Optional[int]) -> Path:
     if content_length is not None:
         max_bytes = MAX_UPLOAD_MB * 1024 * 1024
         if content_length > max_bytes:
-            raise HTTPException(status_code=413, detail=f"Upload zu groß (> {MAX_UPLOAD_MB} MB)" )
-
+            raise HTTPException(status_code=413, detail=f"Upload zu groß (> {MAX_UPLOAD_MB} MB)")
     safe_name = f"{uuid.uuid4().hex}{suffix}"
     path = UPLOAD_DIR / safe_name
     with path.open("wb") as out:
         shutil.copyfileobj(file.file, out)
     logging.info("Datei gespeichert unter %s (original: %s)", path.name, file.filename)
     return path
+
 
 def _sha256_file(path: Path) -> str:
     h = hashlib.sha256()
@@ -170,9 +184,11 @@ def _sha256_file(path: Path) -> str:
             h.update(chunk)
     return h.hexdigest()
 
+
 def _read_csv_fast(path: Path) -> pd.DataFrame:
     enc = auto_detect_encoding(str(path))
     return pd.read_csv(path, encoding=enc, dtype=object, header=None, sep=None, engine="python")
+
 
 def _read_any_table(path: Path) -> Dict[str, pd.DataFrame]:
     suffix = path.suffix.lower()
@@ -184,6 +200,7 @@ def _read_any_table(path: Path) -> Dict[str, pd.DataFrame]:
         return {str(k): v for k, v in sheets.items()}
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Excel/ODS konnte nicht gelesen werden: {e}")
+
 
 def _audit_log(filename: str, stored_as: str, detected: str, confidence: float, rows: int, request_id: str) -> None:
     rec = {
@@ -199,9 +216,11 @@ def _audit_log(filename: str, stored_as: str, detected: str, confidence: float, 
     with (LOG_DIR / "audit_log.ndjson").open("a", encoding="utf-8") as f:
         f.write(json.dumps(rec, ensure_ascii=False) + "\n")
 
+
 # -------------------- Persistenz / Idempotenz --------------------
 def _result_path_by_hash(file_hash: str) -> Path:
     return RESULTS_DIR / f"{file_hash}.json"
+
 
 def _load_result(file_hash: str) -> Optional[Dict[str, Any]]:
     p = _result_path_by_hash(file_hash)
@@ -212,15 +231,18 @@ def _load_result(file_hash: str) -> Optional[Dict[str, Any]]:
             logging.warning("Persistentes Ergebnis konnte nicht gelesen werden: %s", p)
     return None
 
+
 def _save_result(file_hash: str, payload: Dict[str, Any]) -> None:
     try:
         _result_path_by_hash(file_hash).write_text(json.dumps(payload, ensure_ascii=False), encoding="utf-8")
     except Exception as e:
         logging.warning("Persistentes Ergebnis konnte nicht gespeichert werden: %s", e)
 
+
 # ------------------------- SuSa-Check -------------------------
 _DEBIT_PAT = re.compile(r"soll|debit")
 _CREDIT_PAT = re.compile(r"haben|credit")
+
 
 def _find_debit_credit_columns(df: pd.DataFrame) -> Optional[Tuple[str, str]]:
     norm = {str(c): normalize_text(str(c)) for c in df.columns}
@@ -245,6 +267,7 @@ def _find_debit_credit_columns(df: pd.DataFrame) -> Optional[Tuple[str, str]]:
     d = [c for c, n in norm.items() if ("soll" in n or "debit" in n)]
     h = [c for c, n in norm.items() if ("haben" in n or "credit" in n)]
     return (d[0], h[0]) if d and h else None
+
 
 def _find_cumulative_debit_credit_columns(df: pd.DataFrame) -> Optional[Tuple[str, str]]:
     norm = {str(c): normalize_text(str(c)) for c in df.columns}
@@ -271,6 +294,7 @@ def _find_cumulative_debit_credit_columns(df: pd.DataFrame) -> Optional[Tuple[st
         return debit_candidates[0], credit_candidates[0]
     return None
 
+
 def _series_to_decimal(series: pd.Series) -> List[float]:
     vals: List[float] = []
     q = parse_decimal_locale_aware("0.01")
@@ -278,6 +302,7 @@ def _series_to_decimal(series: pd.Series) -> List[float]:
         d = parse_decimal_locale_aware(v).quantize(q)
         vals.append(float(d))
     return vals
+
 
 def _check_susa_balance(df: pd.DataFrame) -> Optional[SusaBalance]:
     cols = _find_debit_credit_columns(df)
@@ -375,6 +400,7 @@ def _check_susa_balance(df: pd.DataFrame) -> Optional[SusaBalance]:
         )
     return None
 
+
 # ---------------------------------------------------------
 # Base44 – POST Hook (optional)
 # ---------------------------------------------------------
@@ -395,6 +421,7 @@ def post_to_base44(payload: dict) -> tuple[int, str]:
         logging.exception("Base44 POST failed:")
         return 0, str(e)
 
+
 # ---------------------------------------------------------
 # API – Startseite/Health
 # ---------------------------------------------------------
@@ -402,9 +429,11 @@ def post_to_base44(payload: dict) -> tuple[int, str]:
 def home():
     return {"message": "Echooz Parser läuft", "version": app.version, "preview_rows_default": PREVIEW_ROWS}
 
+
 @app.get("/healthz")
 def healthz():
     return {"status": "ok", "version": app.version}
+
 
 # ---------------------------------------------------------
 # Upload-Endpunkt mit Force-Refresh + Pipeline-Fingerprint
@@ -565,12 +594,11 @@ async def upload_file(
                 except Exception as e:
                     logging.warning("Aggregation fehlgeschlagen (%s/%s): %s", file.filename, sheet_name, e)
 
-            # >>> NEU: Fingerprint auch in aggregation.meta anhängen
+            # >>> Fingerprint auch in aggregation.meta anhängen + Snapshots schreiben
             if aggregation:
                 aggregation.setdefault("meta", {})
                 aggregation["meta"]["pipeline"] = pipeline
 
-                # >>> NEU: Snapshots schreiben (Bilanz & GuV)
                 try:
                     agg_meta = aggregation.get("meta", {}) or {}
                     agg_period = aggregation.get("period", {}) or {}
@@ -640,7 +668,7 @@ async def upload_file(
                 "period": {"start": period_start, "end": period_end},
                 "received_at": datetime.utcnow().isoformat() + "Z",
             },
-            "pipeline": pipeline,  # <-- NEU: Fingerprint-Block
+            "pipeline": pipeline,
             "sheets": [jsonable_encoder(r.dict()) for r in results],
         }
 
@@ -661,12 +689,14 @@ async def upload_file(
         logging.exception("Fehler beim Verarbeiten der Datei")
         raise HTTPException(status_code=400, detail=str(e))
 
+
 # ---------------------------------------------------------
 # Plausibilität – REST-Endpoint
 # ---------------------------------------------------------
 @app.post("/plausibility", response_model=PlausiResponse)
 def post_plausibility(req: PlausiRequest) -> PlausiResponse:
     return PlausiResponse(findings=plausi_analyze(req.data))
+
 
 # ---------------------------------------------------------
 # Active-Learning-Feedback
@@ -714,6 +744,7 @@ def post_feedback(req: FeedbackRequest):
         logging.exception("Fehler beim Feedback:")
         raise HTTPException(status_code=400, detail=str(e))
 
+
 # ---------------------------------------------------------
 # Ergebnisse abrufen (Persistenz)
 # ---------------------------------------------------------
@@ -724,19 +755,9 @@ def get_result(file_hash: str):
         raise HTTPException(status_code=404, detail="Kein Ergebnis zu diesem Hash gefunden.")
     return data
 
-# ---------------------------------------------------------
-# Snapshots/Pivot lesen (neu)
-# ---------------------------------------------------------
-@app.get("/snapshots/{file_hash}")
-def get_snapshots_api(file_hash: str):
-    return read_snapshots(file_sha256=file_hash)
-
-@app.get("/pivot/{file_hash}")
-def get_pivot_api(file_hash: str):
-    return read_pivot(file_sha256=file_hash)
 
 # ---------------------------------------------------------
-# NEU: Rebuild-Endpoint (Stub) – re-aggregate mit aktuellen Regeln
+# Rebuild-Endpoint – re-aggregate mit aktuellen Regeln
 # ---------------------------------------------------------
 class RebuildRequest(BaseModel):
     prefer_coa: Optional[str] = None   # "skr03"|"skr04"|"netti"|"custom"|None
@@ -744,11 +765,13 @@ class RebuildRequest(BaseModel):
     period_end: Optional[str] = None
     aggregate: Optional[bool] = True
 
+
 @app.post("/rebuild/{file_hash}", response_model=UploadResponse)
 def rebuild(file_hash: str, body: RebuildRequest):
     data = _load_result(file_hash)
     if not data:
         raise HTTPException(status_code=404, detail="Kein persistiertes Ergebnis zu diesem Hash.")
+
     stored_as = (data.get("file") or {}).get("stored_as")
     if not stored_as:
         raise HTTPException(status_code=400, detail="Persistente Datei-Referenz fehlt.")
@@ -756,16 +779,17 @@ def rebuild(file_hash: str, body: RebuildRequest):
     if not path.exists():
         raise HTTPException(status_code=404, detail="Upload-Datei nicht (mehr) vorhanden.")
 
-    # Re-run mit aktuellen Regeln
     try:
         sheets = _read_any_table(path)
         results: List[SheetResult] = []
+
         for sheet_name, raw_df in sheets.items():
             if raw_df.dropna(how="all").empty:
                 continue
 
             header_row = find_header_row(raw_df) or 0
             cols = [str(x) for x in raw_df.iloc[header_row].tolist()]
+
             seen, new_cols = {}, []
             for c in cols:
                 c = (c or "").strip().replace("\n", " ")
@@ -776,10 +800,6 @@ def rebuild(file_hash: str, body: RebuildRequest):
                     seen[c] = 0
                     new_cols.append(c)
 
-
-        
-## hier neu einfügen 
-
             df = raw_df.drop(index=list(range(0, header_row + 1))).reset_index(drop=True)
             df.columns = new_cols
             df = df.convert_dtypes()
@@ -787,15 +807,15 @@ def rebuild(file_hash: str, body: RebuildRequest):
             # Struktur bestimmen
             detected_structure, conf = classify_structure(df.columns, df)
 
-            # 5) SuSa-/Journal-Check (wie im Upload)
+            # SuSa-/Journal-Check
             susa_res: Optional[SusaBalance] = None
             if detected_structure in {"SuSa", "Journal"}:
                 try:
-                     susa_res = _check_susa_balance(df)
+                    susa_res = _check_susa_balance(df)
                 except Exception as e:
                     logging.warning("SuSa-Check (Rebuild) fehlgeschlagen in Sheet '%s': %s", sheet_name, e)
 
-            # 6) Mapping → Canonical
+            # Mapping → Canonical
             mapping = map_to_canonical(
                 df,
                 structure=detected_structure,
@@ -803,6 +823,7 @@ def rebuild(file_hash: str, body: RebuildRequest):
                 pack_path=str(COA_PACK_PATH)
             )
 
+            # Aggregation (optional)
             aggregation = None
             if body.aggregate and detected_structure == "SuSa" and mapping and mapping.get("canonical_columns", {}).get("account"):
                 aggregation = aggregate_from_dataframe(
@@ -816,7 +837,7 @@ def rebuild(file_hash: str, body: RebuildRequest):
                     period_end=body.period_end,
                 )
 
-            # >>> NEU: Fingerprint im Rebuild setzen + Snapshots schreiben
+            # Fingerprint + Snapshots
             if aggregation:
                 pipeline_rb = compute_pipeline_fingerprint(
                     app_version=app.version,
@@ -836,7 +857,6 @@ def rebuild(file_hash: str, body: RebuildRequest):
                 aggregation.setdefault("meta", {})
                 aggregation["meta"]["pipeline"] = pipeline_rb
 
-                # Snapshots (Rebuild)
                 try:
                     agg_meta = aggregation.get("meta", {}) or {}
                     agg_period = aggregation.get("period", {}) or {}
@@ -872,13 +892,16 @@ def rebuild(file_hash: str, body: RebuildRequest):
                 mapping=mapping or None,
                 aggregation=aggregation or None,
             ))
+
         return results
+
     except Exception as e:
         logging.exception("Rebuild fehlgeschlagen")
         raise HTTPException(status_code=400, detail=str(e))
 
+
 # ---------------------------------------------------------
-# SAP-HEADER-FALLBACK (wie gehabt)
+# SAP-HEADER-FALLBACK
 # ---------------------------------------------------------
 _SAP_KEYS = {
     "bukr", "sachkonto", "kurztext", "waehrg", "gsbe",
@@ -887,6 +910,7 @@ _SAP_KEYS = {
     "kum", "kum saldo", "kumuliert"
 }
 _SAP_BLACKLIST = {"sachkontensalden", "vortragsperioden", "berichtsperioden", "rfssld00"}
+
 
 def _sap_header_fallback(raw_df: pd.DataFrame, max_scan: int = 30, min_hits: int = 3) -> Optional[int]:
     n = min(len(raw_df), max_scan)
@@ -903,6 +927,7 @@ def _sap_header_fallback(raw_df: pd.DataFrame, max_scan: int = 30, min_hits: int
             logging.info("🔎 SAP-Fallback-Kopfzeile gewählt: Zeile %d (Treffer=%d)", i, hits)
             return i
     return None
+
 
 # ---------------------------------------------------------
 # Lokaler Start

@@ -1,6 +1,10 @@
 # core/persistence.py
 from __future__ import annotations
-import os, json, sqlite3, threading
+
+import os
+import json
+import sqlite3
+import threading
 from typing import Dict, Any, Optional, List
 from datetime import datetime
 
@@ -8,7 +12,7 @@ _DB_LOCK = threading.Lock()
 _DB_PATH = os.environ.get("ECHOoz_DB_PATH", "echooz_results.sqlite")
 
 # -------------------------------
-# Bestehendes Result-Archiv (beibehalten)
+# Result-Archiv (bestehend)
 # -------------------------------
 DDL_ANALYSIS = """
 CREATE TABLE IF NOT EXISTS analysis_results (
@@ -29,7 +33,7 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_unique_fingerprint
 """
 
 # -------------------------------
-# NEU: Snapshots für Bilanz & GuV + Minimal-Pivot
+# Snapshots für Bilanz & GuV + Minimal-Pivot
 # -------------------------------
 DDL_SNAPSHOTS = """
 CREATE TABLE IF NOT EXISTS bs_snapshots (
@@ -95,21 +99,23 @@ def _apply_ddl(ddl: str) -> None:
             conn.close()
 
 def init_db() -> None:
-    """Ruft bei App-Start genau einmal auf: legt alle nötigen Tabellen/Indizes an."""
+    """Bei App-Start einmal aufrufen: legt Tabellen/Indizes an."""
     _apply_ddl(DDL_ANALYSIS)
     _apply_ddl(DDL_SNAPSHOTS)
 
 # -------------------------------
-# Bestehende Funktionen (unverändert lassen)
+# Result-Archiv (idempotent)
 # -------------------------------
 def persist_result(payload: Dict[str, Any]) -> int:
     """Idempotent: unique by (file_sha256, pipeline_fingerprint)."""
     meta = payload.get("aggregation", {}).get("meta", {})
     period = payload.get("aggregation", {}).get("period", {})
+
     file_sha256 = meta.get("file_sha256", "")
     pipeline_fingerprint = meta.get("pipeline_fingerprint", "")
     coa = meta.get("coa", "")
     coverage = meta.get("coverage", None)
+
     balanced = int(
         payload.get("aggregation", {})
                .get("statements", {})
@@ -117,13 +123,12 @@ def persist_result(payload: Dict[str, Any]) -> int:
                .get("check", {})
                .get("balanced", False)
     )
-    period_start, period_end = period.get("start_date",""), period.get("end_date","")
+    period_start, period_end = period.get("start_date", ""), period.get("end_date", "")
     created_at = meta.get("created_at", "")
 
     with _DB_LOCK:
         conn = _conn()
         try:
-            # Try find existing
             cur = conn.execute(
                 "SELECT id FROM analysis_results WHERE file_sha256=? AND pipeline_fingerprint=?",
                 (file_sha256, pipeline_fingerprint),
@@ -131,11 +136,12 @@ def persist_result(payload: Dict[str, Any]) -> int:
             row = cur.fetchone()
             if row:
                 return int(row[0])
-            # Insert new
+
             cur = conn.execute(
-                "INSERT INTO analysis_results(dataset_id,file_sha256,pipeline_fingerprint,chart_of_accounts,"
-                "period_start,period_end,coverage,balanced,result_json,created_at_utc)"
-                " VALUES(?,?,?,?,?,?,?,?,?,?)",
+                "INSERT INTO analysis_results("
+                "dataset_id,file_sha256,pipeline_fingerprint,chart_of_accounts,"
+                "period_start,period_end,coverage,balanced,result_json,created_at_utc"
+                ") VALUES(?,?,?,?,?,?,?,?,?,?)",
                 (
                     payload.get("request_id") or "",
                     file_sha256,
@@ -163,7 +169,7 @@ def fetch_result_by_id(result_id: int) -> Optional[Dict[str, Any]]:
             conn.close()
 
 # -------------------------------
-# NEU: Snapshots & Pivot API (benutzt dein Echooz-Contract JSON)
+# Snapshots & Pivot
 # -------------------------------
 def write_snapshots(
     *,
@@ -173,25 +179,31 @@ def write_snapshots(
     period_start: Optional[str],
     period_end: Optional[str],
     aggregation: Dict[str, Any],
-) -> None:
+) -> Dict[str, int]:
+    """
+    Persistiert Bilanz- und GuV-Snapshot und gibt die erzeugten IDs zurück.
+    Rückgabe: {"bs_id": <int>, "pl_id": <int>}
+    """
     stmts = aggregation.get("statements", {})
     bs = (stmts.get("balance_sheet") or {})
     pl = (stmts.get("profit_and_loss") or {})
+
     bs_assets = (bs.get("assets") or {})
     bs_le = (bs.get("liabilities_equity") or {})
     bs_check = (bs.get("check") or {})
+
     created_at = datetime.utcnow().isoformat() + "Z"
 
     with _DB_LOCK:
         conn = _conn()
         try:
             # Bilanz
-            conn.execute("""
+            cur = conn.execute("""
                 INSERT INTO bs_snapshots (
                     file_sha256, company_id, coa, period_start, period_end,
                     non_current, current, total_assets,
-                    equity, provisions, liabilities_short_term, liabilities_long_term, total_liabilities_equity,
-                    balanced, difference, created_at
+                    equity, provisions, liabilities_short_term, liabilities_long_term,
+                    total_liabilities_equity, balanced, difference, created_at
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             """, (
                 file_sha256, company_id, (coa or None), period_start, period_end,
@@ -207,9 +219,10 @@ def write_snapshots(
                 float(bs_check.get("difference", 0.0) or 0.0),
                 created_at
             ))
+            bs_id = int(cur.lastrowid)
 
             # GuV
-            conn.execute("""
+            cur = conn.execute("""
                 INSERT INTO pl_snapshots (
                     file_sha256, company_id, coa, period_start, period_end,
                     revenue, material_expenses, personnel_expenses,
@@ -228,8 +241,10 @@ def write_snapshots(
                 float(pl.get("result", 0.0) or 0.0),
                 created_at
             ))
+            pl_id = int(cur.lastrowid)
 
             conn.commit()
+            return {"bs_id": bs_id, "pl_id": pl_id}
         finally:
             conn.close()
 
@@ -270,7 +285,8 @@ def read_pivot(file_sha256: str) -> Dict[str, List[Dict[str, Any]]]:
         try:
             bs = conn.execute("""
                 SELECT created_at, total_assets, equity,
-                       liabilities_short_term AS liab_st, liabilities_long_term AS liab_lt
+                       liabilities_short_term AS liab_st,
+                       liabilities_long_term  AS liab_lt
                 FROM bs_snapshots
                 WHERE file_sha256 = ?
                 ORDER BY created_at ASC
